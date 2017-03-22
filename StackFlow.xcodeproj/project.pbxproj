@@ -13,6 +13,9 @@
 		90621A721E831BD500314660 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90621A701E831BD500314660 /* Main.storyboard */; };
 		90621A7D1E831BD500314660 /* StackFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90621A7C1E831BD500314660 /* StackFlowTests.swift */; };
 		90621A881E831BD500314660 /* StackFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90621A871E831BD500314660 /* StackFlowUITests.swift */; };
+		90621A961E831C6900314660 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90621A951E831C6900314660 /* main.swift */; };
+		909F0AE81E832AA900E83FA2 /* Bridge.plugin in Resources */ = {isa = PBXBuildFile; fileRef = 909F0AE71E832AA900E83FA2 /* Bridge.plugin */; };
+		909F0AEA1E832BE300E83FA2 /* BridgeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F0AE91E832BE300E83FA2 /* BridgeInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		90621A831E831BD500314660 /* StackFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90621A871E831BD500314660 /* StackFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackFlowUITests.swift; sourceTree = "<group>"; };
 		90621A891E831BD500314660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90621A951E831C6900314660 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		909F0AE71E832AA900E83FA2 /* Bridge.plugin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Bridge.plugin; sourceTree = "<group>"; };
+		909F0AE91E832BE300E83FA2 /* BridgeInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,9 @@
 		90621A691E831BD500314660 /* StackFlow */ = {
 			isa = PBXGroup;
 			children = (
+				909F0AE71E832AA900E83FA2 /* Bridge.plugin */,
+				90621A951E831C6900314660 /* main.swift */,
+				909F0AE91E832BE300E83FA2 /* BridgeInterface.swift */,
 				90621A6A1E831BD500314660 /* AppDelegate.swift */,
 				90621A6C1E831BD500314660 /* ViewController.swift */,
 				90621A6E1E831BD500314660 /* Assets.xcassets */,
@@ -129,6 +138,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90621A8C1E831BD500314660 /* Build configuration list for PBXNativeTarget "StackFlow" */;
 			buildPhases = (
+				907750F51E8324D00052E682 /* ShellScript */,
 				90621A631E831BD500314660 /* Sources */,
 				90621A641E831BD500314660 /* Frameworks */,
 				90621A651E831BD500314660 /* Resources */,
@@ -234,6 +244,7 @@
 			files = (
 				90621A6F1E831BD500314660 /* Assets.xcassets in Resources */,
 				90621A721E831BD500314660 /* Main.storyboard in Resources */,
+				909F0AE81E832AA900E83FA2 /* Bridge.plugin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +264,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		907750F51E8324D00052E682 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "source .venv/bin/activate\npython setup.py py2app -A --dist-dir=StackFlow";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		90621A631E831BD500314660 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -260,6 +287,8 @@
 			files = (
 				90621A6D1E831BD500314660 /* ViewController.swift in Sources */,
 				90621A6B1E831BD500314660 /* AppDelegate.swift in Sources */,
+				909F0AEA1E832BE300E83FA2 /* BridgeInterface.swift in Sources */,
+				90621A961E831C6900314660 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +536,7 @@
 				90621A8E1E831BD500314660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90621A8F1E831BD500314660 /* Build configuration list for PBXNativeTarget "StackFlowTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +545,7 @@
 				90621A911E831BD500314660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90621A921E831BD500314660 /* Build configuration list for PBXNativeTarget "StackFlowUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +554,7 @@
 				90621A941E831BD500314660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
