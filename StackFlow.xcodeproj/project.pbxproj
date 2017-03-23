@@ -103,8 +103,8 @@
 			children = (
 				909F0AE71E832AA900E83FA2 /* Bridge.plugin */,
 				90621A951E831C6900314660 /* main.swift */,
-				909F0AE91E832BE300E83FA2 /* BridgeInterface.swift */,
 				90621A6A1E831BD500314660 /* AppDelegate.swift */,
+				909F0AE91E832BE300E83FA2 /* BridgeInterface.swift */,
 				90621A6C1E831BD500314660 /* ViewController.swift */,
 				90621A6E1E831BD500314660 /* Assets.xcassets */,
 				90621A701E831BD500314660 /* Main.storyboard */,
