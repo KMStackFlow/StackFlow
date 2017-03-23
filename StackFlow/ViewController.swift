@@ -18,7 +18,7 @@ class ViewController: NSViewController {
         Swift.print("Info from python:\n\(pythonMessage)")
         
         let a = 1, b = 2
-        Swift.print("\(a) + \(b) = \(Bridge.    ().add(a: 1, b: 2))")
+        Swift.print("\(a) + \(b) = \(Bridge.sharedInstance().add(a: 1, b: 2))")
     }
 
     override var representedObject: Any? {
