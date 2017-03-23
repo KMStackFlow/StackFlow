@@ -12,17 +12,13 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        let a = 1
-        let b = 2
         
         // Do any additional setup after loading the view.
         let pythonMessage = Bridge.sharedInstance().getPythonInformation()
         Swift.print("Info from python:\n\(pythonMessage)")
         
-        Bridge.sharedInstance().echo!(a: 3, b: 4)
-        Swift.print("\(a) + \(b) = \(Bridge.sharedInstance().doSomething!(argumentOne: a, argumentTwo: b))")
+        let a = 1, b = 2
+        Swift.print("\(a) + \(b) = \(Bridge.sharedInstance().add(a: 1, b: 2))")
     }
 
     override var representedObject: Any? {

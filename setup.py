@@ -1,6 +1,9 @@
 """Setuptools setup for creating a .plugin bundle"""
 from setuptools import setup
+import os
+import sys
 
+PREFIX = sys.prefix
 
 APP = ['Bridge.py']
 OPTIONS = {
@@ -11,7 +14,7 @@ OPTIONS = {
     'plist': {
       'PyRuntimeLocations': [
         '@executable_path/../Frameworks/libpython3.6m.dylib',
-        '/Users/acsalu/Dropbox/CornellTech/2017S/StackFlow/.venv/lib/libpython3.6m.dylib'
+        os.path.join(PREFIX, 'lib/libpython3.6m.dylib')
        ]
     }
 }
