@@ -15,6 +15,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        let menu = NSMenu()
+        menu.addItem(NSMenuItem(title: "Quit StackFlow", action: #selector(AppDelegate.terminate(sender:)), keyEquivalent: "q"))
+        statusItem.menu = menu
         if let button = statusItem.button {
             button.image = NSImage(named: "StatusBarButtonImage")
         }
@@ -24,6 +27,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-
+    func terminate(sender: NSButton) {
+        NSApplication.shared().terminate(sender)
+    }
 }
 
