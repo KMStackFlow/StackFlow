@@ -17,12 +17,11 @@ class Bridge(NSObject, protocols=[BridgeInterface]):
   def getPythonInformation(self):
     return sys.version
 
-  def echoWithA_b_(self, a, b):
-      print(a, b)
+  def addWithA_b_(self, a, b):
+      return a + b
 
   def doSomethingWithArgumentOne_argumentTwo_(self, a, b):
       return a + b
-
 
 class ColouredView(NSView):
   def drawRect_(self, dirtyRect):
@@ -33,5 +32,4 @@ class ColouredView(NSView):
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
-print("!!!Does this work?")
 logger.info("Loaded python bundle")
