@@ -69,7 +69,7 @@
 	<key>PyRuntimeLocations</key>
 	<array>
 		<string>@executable_path/../Frameworks/libpython3.6m.dylib</string>
-		<string>/Users/acsalu/Dropbox/CornellTech/2017S/StackFlow/.venv/lib/libpython3.6m.dylib</string>
+		<string>/Users/acsalu/Dropbox/CornellTech/2017S/StackFlow/.venv/lib/python3.6/config-3.6m-darwin/libpython3.6m.dylib</string>
 	</array>
 	<key>PythonInfoDict</key>
 	<dict>
