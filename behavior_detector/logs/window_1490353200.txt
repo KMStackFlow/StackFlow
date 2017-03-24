@@ -1,0 +1,281 @@
+1490387830 Xcode :: main.swift
+1490387836 Messages
+1490387838 Xcode :: main.swift
+1490387840 Notes :: Notes
+1490387842 Xcode :: main.swift
+1490387846 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490387848 Xcode :: main.swift
+1490387850 Finder :: logs
+1490387856 Finder
+1490387858 Finder :: logs
+1490387862 Xcode :: main.swift
+1490387864 Safari
+1490387866 Safari :: class - Python: create object and add attributes to it - Stack Overflow
+1490387868 Finder
+1490387874 Finder :: logs
+1490387878 Xcode :: main.swift
+1490388470 Xcode :: BridgeInterface.swift
+1490388472 Xcode :: ViewController.swift
+1490388476 Terminal :: Terminal
+1490388478 Xcode :: ViewController.swift
+1490388488 Sublime Text 2 :: Bridge.py   StackFlow
+1490388492 Sublime Text 2 :: util.py   StackFlow
+1490388496 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490388506 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490388510 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490388512 Xcode :: ViewController.swift
+1490388528 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490388530 Sublime Text 2 :: Bridge.py   StackFlow
+1490388536 Xcode :: ViewController.swift
+1490388544 Sublime Text 2 :: Bridge.py   StackFlow
+1490388550 Xcode :: ViewController.swift
+1490388556 Sublime Text 2 :: Bridge.py   StackFlow
+1490388558 Finder :: logs
+1490388560 Finder
+1490388576 Finder :: logs
+1490388580 Xcode :: ViewController.swift
+1490388588 Sublime Text 2 :: Bridge.py   StackFlow
+1490388612 Xcode :: ViewController.swift
+1490388632 Xcode :: BridgeInterface.swift
+1490388638 Xcode :: AppDelegate.swift
+1490388640 StackFlow
+1490388642 Sublime Text 2 :: Bridge.py   StackFlow
+1490388656 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490388666 Sublime Text 2 :: Bridge.py   StackFlow
+1490388679 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490388684 Sublime Text 2 :: Bridge.py   StackFlow
+1490388720 Messages
+1490388748 Sublime Text 2 :: Bridge.py   StackFlow
+1490388752 Messages
+1490388782 Sublime Text 2 :: Bridge.py   StackFlow
+1490388786 Messages
+1490388848 Sublime Text 2 :: Bridge.py   StackFlow
+1490388874 Messages
+1490388890 Sublime Text 2 :: Bridge.py   StackFlow
+1490388907 Sublime Text 2 :: setup.py   StackFlow
+1490388908 Sublime Text 2 :: Bridge.py   StackFlow
+1490388910 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490388926 Messages
+1490388942 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490388973 Sublime Text 2
+1490388974 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490388976 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490389206 Safari
+1490389210 Safari :: class - Python: create object and add attributes to it - Stack Overflow
+1490389216 Safari
+1490389220 Safari :: python new thread - Google Search
+1490389222 Safari
+1490389226 Messages
+1490389228 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389254 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490389256 Sublime Text 2 :: Bridge.py   StackFlow
+1490389260 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389277 Safari
+1490389278 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389324 Safari
+1490389326 Safari :: Favorites
+1490389328 Safari
+1490389330 Safari :: 16.2. threading   Higher-level threading interface   Python 2.7.13 documentation
+1490389339 Sublime Text 2 :: Bridge.py   StackFlow
+1490389340 Safari :: 16.2. threading   Higher-level threading interface   Python 2.7.13 documentation
+1490389362 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389364 Safari :: 16.2. threading   Higher-level threading interface   Python 2.7.13 documentation
+1490389398 Sublime Text 2 :: Bridge.py   StackFlow
+1490389400 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389402 Safari
+1490389404 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389408 Safari :: 16.2. threading   Higher-level threading interface   Python 2.7.13 documentation
+1490389418 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389420 Safari
+1490389422 Safari :: 16.2. threading   Higher-level threading interface   Python 2.7.13 documentation
+1490389428 Sublime Text 2 :: Bridge.py   StackFlow
+1490389430 Safari
+1490389432 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389436 Sublime Text 2 :: Bridge.py   StackFlow
+1490389444 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490389446 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490389468 Sublime Text 2
+1490389472 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490389480 Sublime Text 2 :: Bridge.py   StackFlow
+1490389484 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389486 Sublime Text 2 :: Bridge.py   StackFlow
+1490389498 Sublime Text 2
+1490389500 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389502 Sublime Text 2 :: Bridge.py   StackFlow
+1490389504 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389506 Sublime Text 2
+1490389508 Sublime Text 2 :: Bridge.py   StackFlow
+1490389510 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389512 Sublime Text 2 :: Bridge.py   StackFlow
+1490389522 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389532 StackFlow
+1490389534 Sublime Text 2 :: Bridge.py   StackFlow
+1490389538 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490389552 Xcode :: AppDelegate.swift
+1490389611 Xcode :: AppDelegate.swift
+1490389613 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490389619 Sublime Text 2 :: Bridge.py   StackFlow
+1490389622 Sublime Text 2
+1490389623 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490389625 Sublime Text 2 :: Bridge.py   StackFlow
+1490389635 Xcode :: AppDelegate.swift
+1490389643 StackFlow
+1490389645 Sublime Text 2 :: Bridge.py   StackFlow
+1490389651 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490389653 Sublime Text 2 :: Bridge.py   StackFlow
+1490389655 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490389661 Sublime Text 2 :: Bridge.py   StackFlow
+1490389679 Xcode :: BridgeInterface.swift
+1490389683 Xcode :: ViewController.swift
+1490389691 Sublime Text 2 :: Bridge.py   StackFlow
+1490389699 Xcode :: ViewController.swift
+1490389701 Sublime Text 2 :: Bridge.py   StackFlow
+1490389703 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389711 Sublime Text 2 :: Bridge.py   StackFlow
+1490389718 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389719 Sublime Text 2 :: Bridge.py   StackFlow
+1490389723 Safari :: multithreading - Creating Threads in python - Stack Overflow
+1490389725 Safari :: KMStackFlow/StackFlow
+1490390021 Xcode :: ViewController.swift
+1490390033 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490390039 Xcode :: ViewController.swift
+1490390049 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490390057 Safari :: Labview crashed on Mac OS X Sierra: 'nextEventMatchingMask should only be called from the Main Thread!' - Discussion Forums - National Instruments
+1490390061 Safari
+1490390063 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490390067 Safari :: Labview crashed on Mac OS X Sierra: 'nextEventMatchingMask should only be called from the Main Thread!' - Discussion Forums - National Instruments
+1490390069 Safari
+1490390073 Safari :: Labview crashed on Mac OS X Sierra: 'nextEventMatchingMask should only be called from the Main Thread!' - Discussion Forums - National Instruments
+1490390075 Safari
+1490390077 Safari :: thread runeventloop - Google Search
+1490390081 Safari
+1490390083 Safari :: calling runEventLoop from a thread doesn't work   Issue #1414   rejectedsoftware/vibe.d
+1490390091 Safari :: thread runeventloop - Google Search
+1490390093 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490390095 Safari
+1490390097 Safari :: thread runeventloop - Google Search
+1490390099 Xcode :: ViewController.swift
+1490390103 Safari :: thread runeventloop - Google Search
+1490390107 Safari :: thread runeventloop nextEventMatchingMask should only be called from the Main Thread! - Google Search
+1490390111 Safari
+1490390113 Safari :: Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: 'nextEventMatchingMask should only be called from the Main Thread!'   Issue #7791   opencv/opencv
+1490390133 Safari :: thread runeventloop nextEventMatchingMask should only be called from the Main Thread! - Google Search
+1490390135 Safari
+1490390137 Safari :: dso_dataset exception on mac   Issue #6   JakobEngel/dso
+1490390157 Safari
+1490390159 Safari :: thread runeventloop nextEventMatchingMask should only be called from the Main Thread! - Google Search
+1490390211 Sublime Text 2 :: Bridge.py   StackFlow
+1490390245 Sublime Text 2
+1490390247 Sublime Text 2 :: Bridge.py   StackFlow
+1490390267 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490390275 Sublime Text 2
+1490390277 Sublime Text 2 :: Bridge.py   StackFlow
+1490390281 Xcode :: ViewController.swift
+1490390285 Xcode
+1490390287 Xcode :: ViewController.swift
+1490390291 Sublime Text 2 :: Bridge.py   StackFlow
+1490390295 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490390312 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490390313 Sublime Text 2 :: Bridge.py   StackFlow
+1490390325 Xcode :: ViewController.swift
+1490390348 Xcode :: ViewController.swift
+1490390352 LINE :: Item-0
+1490390356 Xcode :: ViewController.swift
+1490390358 Finder :: logs
+1490390360 Finder
+1490390364 Xcode :: ViewController.swift
+1490390370 Sublime Text 2 :: Bridge.py   StackFlow
+1490390401 Sublime Text 2
+1490390402 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490390412 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490390414 Xcode :: ViewController.swift
+1490390416 Xcode :: BridgeInterface.swift
+1490390440 Xcode :: Main.storyboard
+1490390450 Xcode :: Main.storyboard   Edited
+1490390452 Xcode :: Main.storyboard
+1490390476 Xcode
+1490390509 Xcode :: Main.storyboard   Edited
+1490390526 Xcode :: Main.storyboard
+1490390551 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490390557 Sublime Text 2 :: Bridge.py   StackFlow
+1490390559 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490390569 Sublime Text 2 :: Bridge.py   StackFlow
+1490390573 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490390577 Sublime Text 2
+1490390579 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490390591 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490390617 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490390643 Xcode :: Main.storyboard
+1490390661 Xcode :: Main.storyboard
+1490390675 StackFlow :: Item-0
+1490390677 Xcode :: Main.storyboard
+1490390685 StackFlow :: Item-0
+1490390687 Xcode :: Main.storyboard
+1490390689 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490390703 Xcode :: Main.storyboard
+1490390705 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490390709 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490390819 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490390847 StackFlow :: Item-0
+1490390849 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490390853 Sublime Text 2 :: Bridge.py   StackFlow
+1490390855 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490390885 Xcode :: Main.storyboard
+1490390901 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490390915 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490390919 Xcode :: Main.storyboard
+1490390923 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490390929 Sublime Text 2
+1490390931 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490390949 Sublime Text 2
+1490390960 Xcode :: Main.storyboard
+1490390964 StackFlow :: Item-0
+1490390966 Xcode :: Main.storyboard
+1490390968 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490390970 Xcode :: Main.storyboard
+1490390978 Finder :: logs
+1490390980 Xcode :: Main.storyboard
+1490390982 Messages
+1490390986 Xcode :: Main.storyboard
+1490390988 Dictionary :: Dictionary (2 found)
+1490390990 Xcode :: Main.storyboard
+1490391044 Xcode :: Main.storyboard
+1490391046 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490391048 Xcode :: Main.storyboard
+1490391052 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490391062 Xcode :: Main.storyboard
+1490391072 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490391078 Xcode :: Main.storyboard
+1490391080 Xcode :: ViewController.swift
+1490391094 Safari :: Favorites
+1490391096 Safari
+1490391098 Safari :: Favorites
+1490391100 Safari
+1490391102 Safari :: xcode - How to create a delay in Swift? - Stack Overflow
+1490391107 Xcode :: ViewController.swift
+1490391112 Safari :: xcode - How to create a delay in Swift? - Stack Overflow
+1490391114 Xcode :: ViewController.swift   Edited
+1490391143 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490391151 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490391153 Sublime Text 2
+1490391155 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490391157 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490391187 Xcode :: ViewController.swift
+1490391205 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490391210 Xcode :: ViewController.swift
+1490391387 Xcode :: ViewController.swift
+1490391399 Xcode
+1490391401 Xcode :: ViewController.swift   Edited
+1490391405 Xcode
+1490391407 Xcode :: ViewController.swift   Edited
+1490391409 Xcode
+1490391411 Xcode :: ViewController.swift   Edited
+1490391429 Xcode :: ViewController.swift
+1490391431 Xcode :: ViewController.swift   Edited
+1490391433 Xcode :: ViewController.swift
+1490391437 Sublime Text 2 :: ulogme_osx.py   StackFlow
+1490391439 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490391464 Sublime Text 2 :: behavior_detector.py   StackFlow
+1490391466 Xcode :: ViewController.swift
+1490391571 Notes :: Notes
+1490391573 Xcode :: ViewController.swift
