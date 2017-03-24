@@ -8,6 +8,7 @@
 
 import Cocoa
 
+let NotificationBreatheButtonClicked: Notification.Name = Notification.Name(rawValue: "com.keymochi.stackflow.breath-button-clicked")
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -25,6 +26,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         notificationCenter.delegate = self
+        
+        // TODO: Hack to hide window at launch time
+        NSApplication.shared().windows.last!.close()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -79,6 +83,7 @@ extension AppDelegate: NSUserNotificationCenterDelegate {
 extension AppDelegate {
     func handleBreathe() {
         print("Breathe!")
+        NotificationCenter.default.post(name: NotificationBreatheButtonClicked, object: self)
     }
 }
 
