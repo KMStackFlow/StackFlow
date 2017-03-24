@@ -19,6 +19,10 @@ class ViewController: NSViewController {
         
         let a = 1, b = 2
         Swift.print("\(a) + \(b) = \(Bridge.sharedInstance().add(a: 1, b: 2))")
+		Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in 
+			Swift.print(Bridge.sharedInstance().isContextSwitching())
+		}
+		
     }
 
     override var representedObject: Any? {
