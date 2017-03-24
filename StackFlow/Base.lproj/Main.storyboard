@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12117" systemVersion="16E192b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -666,7 +666,8 @@
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -683,19 +684,27 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="StackFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="960" height="540"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eI4-f4-8W8" customClass="ColouredView">
-                                <rect key="frame" x="159" y="80" width="163" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="eI4-f4-8W8" customClass="AVPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="960" height="540"/>
                             </customView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="eI4-f4-8W8" firstAttribute="height" secondItem="m2S-Jp-Qdl" secondAttribute="height" id="HKa-cy-O1I"/>
+                            <constraint firstItem="eI4-f4-8W8" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" id="hLu-aA-zqo"/>
+                            <constraint firstItem="eI4-f4-8W8" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="iEn-he-CRB"/>
+                            <constraint firstItem="eI4-f4-8W8" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="ueB-HB-vEm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playerView" destination="eI4-f4-8W8" id="dCK-CD-fsB"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="67" y="826"/>
         </scene>
     </scenes>
 </document>

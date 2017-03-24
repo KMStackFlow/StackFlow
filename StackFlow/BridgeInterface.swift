@@ -14,9 +14,8 @@ import Foundation
 @objc public protocol BridgeInterface {
     static func createInstance() -> BridgeInterface
     func getPythonInformation() -> String
-    
     func add(a: Int, b: Int) -> Int
-    func doSomething(argumentOne: Int, argumentTwo: Int) -> Int
+	func isContextSwitching() -> Bool
 }
 
 /// A simple class for access to an instance of the python interface
