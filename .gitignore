@@ -171,3 +171,6 @@ ENV/
 .ropeproject
 
 # End of https://www.gitignore.io/api/python
+
+StackFlow/Bridge.plugin/
+update
