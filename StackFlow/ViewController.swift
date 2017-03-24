@@ -29,13 +29,22 @@ class ViewController: NSViewController {
         }
     }
     
+    func enterFullScreen() {
+        guard let mainScreenFrame = NSScreen.main()?.frame else { return }
+        guard let newWindowFrameRect = self.view.window?.frameRect(forContentRect: mainScreenFrame) else { return }
+        self.view.window?.setFrame(newWindowFrameRect, display: true)
+    }
+    
     func loadVideo() {
         guard let filePath = Bundle.main.path(forResource: "breathe-with-me", ofType: "m4v") else { return }
         player = AVPlayer(url: URL(fileURLWithPath: filePath))
         playerView.player = player
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.itemDidFinishPlaying(_:)), name: Notification.Name.AVPlayerItemDidPlayToEndTime, object: player?.currentItem)
     }
-    
+}
+
+// MARK: - Notification Handlers
+extension ViewController {
     func itemDidFinishPlaying(_ noitfication: Notification) {
         self.view.window?.orderOut(self)
     }
@@ -43,6 +52,7 @@ class ViewController: NSViewController {
     func handleBreatheButtonClicked(_ noitfication: Notification) {
         self.view.window?.makeKeyAndOrderFront(nil)
         NSApplication.shared().activate(ignoringOtherApps: true)
+        enterFullScreen()
         loadVideo()
         player?.play()
     }
