@@ -20,6 +20,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let menu = NSMenu()
         menu.addItem(NSMenuItem(title: "Send Notification", action: #selector(AppDelegate.sendNotification), keyEquivalent: "s"))
         menu.addItem(NSMenuItem(title: "Quit StackFlow", action: #selector(AppDelegate.terminate(sender:)), keyEquivalent: "q"))
+        menu.addItem(NSMenuItem(title: "Productivity Data", action: #selector(AppDelegate.dataPopUp), keyEquivalent: "d"))
+        
         statusItem.menu = menu
         if let button = statusItem.button {
             button.image = NSImage(named: "StatusBarButtonImage")
@@ -48,6 +50,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func terminate(sender: NSButton) {
         NSApplication.shared().terminate(sender)
+    }
+    
+    // Visualization pop up
+    
+    func dataPopUp(){
+        print("Productivity Data Requested")
     }
 }
 
