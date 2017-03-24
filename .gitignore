@@ -172,5 +172,8 @@ ENV/
 
 # End of https://www.gitignore.io/api/python
 
-StackFlow/Bridge.plugin/
+StackFlow/Bridge.plugin
 update
+.DS_Store
+ulogme/logs
+*.pyc
