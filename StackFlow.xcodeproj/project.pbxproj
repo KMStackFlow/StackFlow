@@ -16,6 +16,9 @@
 		90621A961E831C6900314660 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90621A951E831C6900314660 /* main.swift */; };
 		909F0AE81E832AA900E83FA2 /* Bridge.plugin in Resources */ = {isa = PBXBuildFile; fileRef = 909F0AE71E832AA900E83FA2 /* Bridge.plugin */; };
 		909F0AEA1E832BE300E83FA2 /* BridgeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F0AE91E832BE300E83FA2 /* BridgeInterface.swift */; };
+		90E8784F1E85A974002D3A04 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E8784E1E85A974002D3A04 /* AVKit.framework */; };
+		90E878511E85AAF3002D3A04 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E878501E85AAF3002D3A04 /* AVFoundation.framework */; };
+		90E878551E85AB63002D3A04 /* breathe-with-me.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 90E878541E85AB63002D3A04 /* breathe-with-me.m4v */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		90621A951E831C6900314660 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		909F0AE71E832AA900E83FA2 /* Bridge.plugin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Bridge.plugin; sourceTree = "<group>"; };
 		909F0AE91E832BE300E83FA2 /* BridgeInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeInterface.swift; sourceTree = "<group>"; };
+		90E8784E1E85A974002D3A04 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		90E878501E85AAF3002D3A04 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		90E878541E85AB63002D3A04 /* breathe-with-me.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "breathe-with-me.m4v"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E878511E85AAF3002D3A04 /* AVFoundation.framework in Frameworks */,
+				90E8784F1E85A974002D3A04 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +93,7 @@
 				90621A7B1E831BD500314660 /* StackFlowTests */,
 				90621A861E831BD500314660 /* StackFlowUITests */,
 				90621A681E831BD500314660 /* Products */,
+				90E8784D1E85A974002D3A04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +115,7 @@
 				90621A6A1E831BD500314660 /* AppDelegate.swift */,
 				909F0AE91E832BE300E83FA2 /* BridgeInterface.swift */,
 				90621A6C1E831BD500314660 /* ViewController.swift */,
+				90E878541E85AB63002D3A04 /* breathe-with-me.m4v */,
 				90621A6E1E831BD500314660 /* Assets.xcassets */,
 				90621A701E831BD500314660 /* Main.storyboard */,
 				90621A731E831BD500314660 /* Info.plist */,
@@ -129,6 +139,15 @@
 				90621A891E831BD500314660 /* Info.plist */,
 			);
 			path = StackFlowUITests;
+			sourceTree = "<group>";
+		};
+		90E8784D1E85A974002D3A04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90E878501E85AAF3002D3A04 /* AVFoundation.framework */,
+				90E8784E1E85A974002D3A04 /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90621A6F1E831BD500314660 /* Assets.xcassets in Resources */,
+				90E878551E85AB63002D3A04 /* breathe-with-me.m4v in Resources */,
 				90621A721E831BD500314660 /* Main.storyboard in Resources */,
 				909F0AE81E832AA900E83FA2 /* Bridge.plugin in Resources */,
 			);
