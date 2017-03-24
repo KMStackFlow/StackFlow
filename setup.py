@@ -9,12 +9,12 @@ APP = ['Bridge.py']
 OPTIONS = {
   # Any local packages to include in the bundle should go here.
   # See the py2app documentation for more
-  "includes": ['.venv/lib/libpython3.6m.dylib'],
+  "includes": ['.venv/lib/libpython3.6m.dylib', '.venv/lib/python3.6/config-3.6m-darwin/libpython3.6m.dylib'],
   'argv_emulation': True,
     'plist': {
       'PyRuntimeLocations': [
         '@executable_path/../Frameworks/libpython3.6m.dylib',
-        os.path.join(PREFIX, 'lib/libpython3.6m.dylib')
+        os.path.join(PREFIX, 'lib/python3.6/config-3.6m-darwin/libpython3.6m.dylib')
        ]
     }
 }
