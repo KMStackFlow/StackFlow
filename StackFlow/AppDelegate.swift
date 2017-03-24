@@ -35,11 +35,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let notification = NSUserNotification()
         notification.title = "StackFlow"
         notification.informativeText = "You've been context switching a lot..."
-        
         notification.soundName = NSUserNotificationDefaultSoundName
         notification.actionButtonTitle = "Breathe"
         notification.hasActionButton = true
-        notification.setValue(true, forKey: "_showsButtons")
         
         notificationCenter.deliver(notification)
     }
