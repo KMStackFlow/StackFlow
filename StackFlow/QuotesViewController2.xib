@@ -43,9 +43,9 @@
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Vm-pT-diV">
                     <rect key="frame" x="92" y="89" width="297" height="94"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="This is a long Quote" id="Xvr-8k-G8T">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="This is a long Quote" id="Xvr-8k-G8T">
+                        <font key="font" size="13" name="Verdana"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>

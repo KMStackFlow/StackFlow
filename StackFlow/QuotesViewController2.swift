@@ -10,6 +10,7 @@ import Cocoa
 
 class QuotesViewController2: NSViewController {
     
+   
     @IBOutlet var textLabel: NSTextField!
     
     let quotes = Quote.all
@@ -21,16 +22,34 @@ class QuotesViewController2: NSViewController {
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.wantsLayer = true
+        // Do view setup here.
+    }
+    
+    
     
     override func viewWillAppear() {
-                super.viewWillAppear()
+        super.viewWillAppear()
+        awakeFromNib()
+//        self.view.wantsLayer = true
         
         currentQuoteIndex = 0
     }
     
+    override func awakeFromNib() {
+        if self.view.layer != nil {
+            let color : CGColor = CGColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1.0)
+            self.view.layer?.backgroundColor = color
+        }
+        
+    }
+    
     func updateQuote() {
         //        textLabel.stringValue = toString(quotes[currentQuoteIndex])
-        textLabel.stringValue = String(describing: quotes[currentQuoteIndex])
+        textLabel.stringValue = String(describing: quotes[currentQuoteIndex].text) + "\n" +
+        " - " + String(describing: quotes[currentQuoteIndex].author)
     }
     
     @IBAction func goLeft(_ sender: Any) {
@@ -56,11 +75,7 @@ class QuotesViewController2: NSViewController {
     }
 
 
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // Do view setup here.
-//    }
-    
+   
 }
 
 extension QuotesViewController2 {
