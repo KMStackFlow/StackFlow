@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="QuotesViewController2" customModule="StackFlow" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="QuotesViewController" customModule="StackFlow" customModuleProvider="target">
             <connections>
                 <outlet property="textLabel" destination="1Vm-pT-diV" id="76m-5q-vkM"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
