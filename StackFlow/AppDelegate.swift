@@ -14,22 +14,45 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
     let notificationCenter = NSUserNotificationCenter.default
+    let popover = NSPopover()
+    var eventMonitor: EventMonitor?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         let menu = NSMenu()
+        
         menu.addItem(NSMenuItem(title: "Send Notification", action: #selector(AppDelegate.sendNotification), keyEquivalent: "s"))
         menu.addItem(NSMenuItem(title: "Quit StackFlow", action: #selector(AppDelegate.terminate(sender:)), keyEquivalent: "q"))
+        menu.addItem(NSMenuItem(title: "Inspiration", action: #selector(AppDelegate.togglePopover), keyEquivalent: "i"))
+        
         statusItem.menu = menu
         if let button = statusItem.button {
             button.image = NSImage(named: "StatusBarButtonImage")
         }
         
-        notificationCenter.delegate = self
+    
+       
+        popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
+        
+        
+                notificationCenter.delegate = self
         
         // TODO: Hack to hide window at launch time
+    
         NSApplication.shared().windows.last!.close()
+        
+
+        eventMonitor = EventMonitor(mask: [NSEventMask.leftMouseDown, NSEventMask.rightMouseDown]) { [unowned self] event in
+            if self.popover.isShown {
+                self.closePopover(sender: event)
+            }
+        }
+        eventMonitor?.start()
+        
     }
+    
+    
+    
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
@@ -49,6 +72,36 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func terminate(sender: NSButton) {
         NSApplication.shared().terminate(sender)
     }
+    
+    // Visualization pop up
+    
+    func dataPopUp(){
+        print("Productivity Data Requested")
+    }
+    
+    func showPopover(sender: AnyObject?) {
+        if let button = statusItem.button {
+            popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+            eventMonitor?.start()
+        }
+    }
+    
+    func closePopover(sender: AnyObject?) {
+        popover.performClose(sender)
+        eventMonitor?.stop()
+    }
+    
+    func togglePopover(sender: AnyObject?) {
+        print ("in Toggle Popeover")
+        if popover.isShown {
+//            closePopover(sender:  anyObject?)
+            closePopover(sender: NSObject.self)
+        } else {
+            showPopover(sender: NSObject.self)
+        }
+    }
+    
+
 }
 
 // MARK: - NSUserNotificationCenterDelegate
