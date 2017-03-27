@@ -32,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     
        
-        popover.contentViewController = QuotesViewController2(nibName: "QuotesViewController2", bundle: nil)
+        popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
         
         
                 notificationCenter.delegate = self

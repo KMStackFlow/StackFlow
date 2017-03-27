@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class QuotesViewController2: NSViewController {
+class QuotesViewController: NSViewController {
     
    
     @IBOutlet var textLabel: NSTextField!
@@ -78,7 +78,7 @@ class QuotesViewController2: NSViewController {
    
 }
 
-extension QuotesViewController2 {
+extension QuotesViewController {
     @IBAction func goLeft(sender: NSButton) {
         
         currentQuoteIndex = (currentQuoteIndex - 1 + quotes.count) % quotes.count
