@@ -19,6 +19,10 @@
 		90E8784F1E85A974002D3A04 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E8784E1E85A974002D3A04 /* AVKit.framework */; };
 		90E878511E85AAF3002D3A04 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E878501E85AAF3002D3A04 /* AVFoundation.framework */; };
 		90E878551E85AB63002D3A04 /* breathe-with-me.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 90E878541E85AB63002D3A04 /* breathe-with-me.m4v */; };
+		EC3ED04C1E8707C30068E4A0 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3ED04B1E8707C30068E4A0 /* Quote.swift */; };
+		EC3ED04E1E870D5F0068E4A0 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3ED04D1E870D5F0068E4A0 /* EventMonitor.swift */; };
+		EC3ED0531E8737CB0068E4A0 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3ED0511E8737CB0068E4A0 /* QuotesViewController.swift */; };
+		EC3ED0541E8737CB0068E4A0 /* QuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC3ED0521E8737CB0068E4A0 /* QuotesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		90E8784E1E85A974002D3A04 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		90E878501E85AAF3002D3A04 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		90E878541E85AB63002D3A04 /* breathe-with-me.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "breathe-with-me.m4v"; sourceTree = "<group>"; };
+		EC3ED04B1E8707C30068E4A0 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		EC3ED04D1E870D5F0068E4A0 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		EC3ED0511E8737CB0068E4A0 /* QuotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
+		EC3ED0521E8737CB0068E4A0 /* QuotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuotesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +121,10 @@
 				909F0AE71E832AA900E83FA2 /* Bridge.plugin */,
 				90621A951E831C6900314660 /* main.swift */,
 				90621A6A1E831BD500314660 /* AppDelegate.swift */,
+				EC3ED0511E8737CB0068E4A0 /* QuotesViewController.swift */,
+				EC3ED0521E8737CB0068E4A0 /* QuotesViewController.xib */,
+				EC3ED04D1E870D5F0068E4A0 /* EventMonitor.swift */,
+				EC3ED04B1E8707C30068E4A0 /* Quote.swift */,
 				909F0AE91E832BE300E83FA2 /* BridgeInterface.swift */,
 				90621A6C1E831BD500314660 /* ViewController.swift */,
 				90E878541E85AB63002D3A04 /* breathe-with-me.m4v */,
@@ -261,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC3ED0541E8737CB0068E4A0 /* QuotesViewController.xib in Resources */,
 				90621A6F1E831BD500314660 /* Assets.xcassets in Resources */,
 				90E878551E85AB63002D3A04 /* breathe-with-me.m4v in Resources */,
 				90621A721E831BD500314660 /* Main.storyboard in Resources */,
@@ -305,9 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC3ED0531E8737CB0068E4A0 /* QuotesViewController.swift in Sources */,
 				90621A6D1E831BD500314660 /* ViewController.swift in Sources */,
 				90621A6B1E831BD500314660 /* AppDelegate.swift in Sources */,
 				909F0AEA1E832BE300E83FA2 /* BridgeInterface.swift in Sources */,
+				EC3ED04E1E870D5F0068E4A0 /* EventMonitor.swift in Sources */,
+				EC3ED04C1E8707C30068E4A0 /* Quote.swift in Sources */,
 				90621A961E831C6900314660 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
