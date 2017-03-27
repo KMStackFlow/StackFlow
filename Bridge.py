@@ -25,6 +25,9 @@ class Bridge(NSObject, protocols=[BridgeInterface]):
     def isContextSwitching(self):
     	return BT.is_context_switching()
 
+    def moniterWindowChange(self):
+    	BT.moniter_window_change()
+
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
