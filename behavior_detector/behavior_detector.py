@@ -1,4 +1,5 @@
 from behavior_detector.ulogme_osx import EventSniffer
+import behavior_detector.ulogme_osx
 import behavior_detector.util as util
 import os
 
@@ -26,6 +27,6 @@ class BehaviorDetector(object):
 
 
 	def is_context_switching(self):
-		print("is context switching?")
-		print(self.event_sniffer.get_current_window_name())
+		print(self.event_sniffer.last_records)
 		return True
+

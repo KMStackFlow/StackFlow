@@ -21,7 +21,7 @@ import Foundation
 /// A simple class for access to an instance of the python interface
 class Bridge {
     static private var instance : BridgeInterface?
-    
+	
     static func sharedInstance() -> BridgeInterface {
         return instance!
     }

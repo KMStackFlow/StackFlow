@@ -23,7 +23,7 @@ class Bridge(NSObject, protocols=[BridgeInterface]):
         return a + b
 
     def isContextSwitching(self):
-    	return BT.is_context_switching()
+    	return BD.is_context_switching()
 
 
 logger = logging.getLogger(__name__)
@@ -31,5 +31,5 @@ logging.basicConfig(level=logging.INFO)
 
 logger.info("Loaded python bundle")
 
-BT = BehaviorDetector()
-BT.run()
+BD = BehaviorDetector()
+BD.run()
