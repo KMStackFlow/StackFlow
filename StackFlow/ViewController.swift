@@ -23,7 +23,7 @@ class ViewController: NSViewController {
         
         // Do any additional setup after loading the view.        
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in 
-          Swift.print(Bridge.sharedInstance().moniterWindowChange())
+          Swift.print(Bridge.sharedInstance().isContextSwitching())
         }
 
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.handleBreatheButtonClicked(_:)), name: NotificationBreatheButtonClicked, object: self.appDelegate!)

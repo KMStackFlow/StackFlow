@@ -9,9 +9,13 @@ from Quartz import CGWindowListCopyWindowInfo, kCGWindowListOptionOnScreenOnly, 
 from PyObjCTools import AppHelper
 
 from behavior_detector.rewind7am import rewindTime
+from collections import namedtuple
 
 DEBUG_APP = False
 DEBUG_KEYSTROKE = False
+
+Record = namedtuple('Record', ('window_name', 'timestamp'))
+
 
 def current_time():
 	"""
@@ -48,6 +52,9 @@ class AppDelegate(NSObject):
 			print('Got active app callback at %d' % current_time())
 		self.event_sniffer.write_active_app()
 
+	def moniterLastRecords_(self, timer):
+		self.event_sniffer.update_last_records()
+
 
 class EventSniffer:
 	
@@ -56,6 +63,8 @@ class EventSniffer:
 		self.current_app = None
 		self.last_app_logged = None
 		self.init_chrome_tab_script()
+		self.num_records = 5
+		self.last_records = []
 		
 	def init_chrome_tab_script(self):
 		self.chrome_tab_script = NSAppleScript.alloc().initWithSource_(
@@ -72,6 +81,13 @@ class EventSniffer:
 				'timerCallback:',
 				None,
 				True)
+
+	def update_last_records(self):
+		if not self.last_records \
+		or self.last_app_logged != self.last_records[-1].window_name:
+			if len(self.last_records) == self.num_records:
+				_ = self.last_records.pop(0)
+			self.last_records.append(Record(self.last_app_logged, current_time()))
 		
 	def run(self):
 		NSApplication.sharedApplication()
@@ -101,6 +117,10 @@ class EventSniffer:
 
 		NSTimer.scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_(
 				self.options.active_window_time, self.delegate, 'writeActiveApp:',
+				None, True)
+		
+		NSTimer.scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_(
+				self.options.active_window_time, self.delegate, 'moniterLastRecords:',
 				None, True)
 
 		# Start the application. This doesn't return.
