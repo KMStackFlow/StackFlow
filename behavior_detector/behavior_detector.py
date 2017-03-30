@@ -53,7 +53,6 @@ class BehaviorDetector(object):
 		CS = False
 		OB = False
 		records = self.event_sniffer.last_records
-		print(records)
 		aggregate = defaultdict(int)
 		distract_count = 0
 		if records:
@@ -70,7 +69,6 @@ class BehaviorDetector(object):
 				last_time = curr_time
 				
 				if time_diff and last_window in DISTRACT_DOMAINS:
-					print(time_diff, last_window)
 					aggregate[last_window] += time_diff
 
 				if window_name[0] in self.CHROME:
@@ -87,13 +85,10 @@ class BehaviorDetector(object):
 					CS = True
 			curr_time_diff = int(time.time()) - curr_time
 			if last_window in DISTRACT_DOMAINS:
-				print("aggregate", curr_time_diff)
 				aggregate[last_window] += curr_time_diff
 			distracted = [i for i in aggregate if aggregate[i] >= self.OFFENSIVE_TIME]
-			print(distracted)
 			if distracted:
 				OB = True
-			print("context swtiching", CS)
 		return CS or OB
 
 		
