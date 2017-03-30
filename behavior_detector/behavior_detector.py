@@ -5,6 +5,8 @@ import os
 from urllib.parse import urlparse
 from behavior_detector.distracting_key import DISTRACT_DOMAINS
 from collections import defaultdict
+import time
+
 
 
 class BehaviorDetector(object):
@@ -26,8 +28,8 @@ class BehaviorDetector(object):
 		# TODO line 26: Safari handles URLs weird. We don't always get an actual URL...
 		self.SAFARI = ['Safari']
 		self.CONTEXT_SWITCHING_SEC = 20
-		self.CONTEXT_SWITCHING_DISTRACT = 0.5
-		self.OFFENSIVE_TIME = 900 #15 min.
+		self.CONTEXT_SWITCHING_DISTRACT = 0.6
+		self.OFFENSIVE_TIME = 30 #900 #15 min.
 
 	def run(self):
 		print("running EventSniffer...\n")
@@ -51,6 +53,7 @@ class BehaviorDetector(object):
 		CS = False
 		OB = False
 		records = self.event_sniffer.last_records
+		print(records)
 		aggregate = defaultdict(int)
 		distract_count = 0
 		if records:
@@ -82,10 +85,15 @@ class BehaviorDetector(object):
 				if time_diff and time_diff <= self.CONTEXT_SWITCHING_SEC \
 						and distract_ratio >= self.CONTEXT_SWITCHING_DISTRACT:
 					CS = True
-
+			curr_time_diff = int(time.time()) - curr_time
+			if last_window in DISTRACT_DOMAINS:
+				print("aggregate", curr_time_diff)
+				aggregate[last_window] += curr_time_diff
 			distracted = [i for i in aggregate if aggregate[i] >= self.OFFENSIVE_TIME]
+			print(distracted)
 			if distracted:
 				OB = True
+			print("context swtiching", CS)
 		return CS or OB
 
 		
