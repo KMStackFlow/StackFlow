@@ -24,6 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(NSMenuItem(title: "Send Notification", action: #selector(AppDelegate.sendNotification), keyEquivalent: "s"))
         menu.addItem(NSMenuItem(title: "Quit StackFlow", action: #selector(AppDelegate.terminate(sender:)), keyEquivalent: "q"))
         menu.addItem(NSMenuItem(title: "Inspiration", action: #selector(AppDelegate.togglePopover), keyEquivalent: "i"))
+		menu.addItem(NSMenuItem(title: "End My Day", action: #selector(AppDelegate.endMyDay), keyEquivalent: "e"))
         
         statusItem.menu = menu
         if let button = statusItem.button {
@@ -100,6 +101,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             showPopover(sender: NSObject.self)
         }
     }
+	
+	func endMyDay(sender: AnyObject?) {
+		print("end my day")
+		popover.contentViewController = EndMyDayViewController(nibName: "EndMyDayViewController", bundle: nil)
+		if let button = statusItem.button {
+			popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+		}
+	}
     
 
 }
