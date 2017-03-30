@@ -45,7 +45,7 @@ class BehaviorDetector(object):
 			return window
 
 
-	def parse_last_records(self):
+	def should_breathe(self):
 		""" Parses last records and analyzes
 			Returns: True if user is context_switching or conducting offensive behavior, else False
 			Assumption: Only distracting domains, not programs.
@@ -89,6 +89,8 @@ class BehaviorDetector(object):
 			distracted = [i for i in aggregate if aggregate[i] >= self.OFFENSIVE_TIME]
 			if distracted:
 				OB = True
+		if CS or OB:
+			self.event_sniffer.last_records = []
 		return CS or OB
 
 		

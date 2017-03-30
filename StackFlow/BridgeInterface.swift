@@ -15,7 +15,7 @@ import Foundation
     static func createInstance() -> BridgeInterface
     func getPythonInformation() -> String
     func add(a: Int, b: Int) -> Int
-	func isContextSwitching() -> Bool
+	func shouldBreathe() -> Bool
 }
 
 /// A simple class for access to an instance of the python interface
