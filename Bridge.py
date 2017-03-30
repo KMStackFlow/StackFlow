@@ -22,8 +22,8 @@ class Bridge(NSObject, protocols=[BridgeInterface]):
     def addWithA_b_(self, a, b):
         return a + b
 
-    def isContextSwitching(self):
-    	return BD.parse_last_records()
+    def shouldBreathe(self):
+    	return BD.should_breathe()
 
 
 logger = logging.getLogger(__name__)
