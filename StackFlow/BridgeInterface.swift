@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 /// A simple demonstration interface to the python module
 @objc public protocol BridgeInterface {
     static func createInstance() -> BridgeInterface
