@@ -18,4 +18,5 @@ before_script:
   - pip install -U pyobjc
 
 script:
+  - xcodebuild -project StackFlow.xcodeproj -list
   - xcodebuild -project StackFlow.xcodeproj -scheme StackFlow test | xcpretty
