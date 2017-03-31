@@ -59,10 +59,11 @@ class QuotesViewController: NSViewController {
     }
     
     @IBAction func quit(_ sender: NSButton) {
-        
-        
+		let appDelegate = NSApplication.shared().delegate as! AppDelegate
+		appDelegate.closePopover(sender: nil)
+		
 
-        
+		
 //        NSApplication.shared().terminate(sender)
 //        self.presenting!.presenting!.dismissViewController(self)
 //        self.dismissViewController( self)

@@ -23,20 +23,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         menu.addItem(NSMenuItem(title: "Send Notification", action: #selector(AppDelegate.sendNotification), keyEquivalent: "s"))
         menu.addItem(NSMenuItem(title: "Quit StackFlow", action: #selector(AppDelegate.terminate(sender:)), keyEquivalent: "q"))
-        menu.addItem(NSMenuItem(title: "Inspiration", action: #selector(AppDelegate.togglePopover), keyEquivalent: "i"))
+        menu.addItem(NSMenuItem(title: "Inspiration", action: #selector(AppDelegate.showQuoteVC), keyEquivalent: "i"))
 		menu.addItem(NSMenuItem(title: "End My Day", action: #selector(AppDelegate.endMyDay), keyEquivalent: "e"))
         
         statusItem.menu = menu
         if let button = statusItem.button {
             button.image = NSImage(named: "StatusBarButtonImage")
         }
-        
-    
-       
-        popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
-        
-        
-                notificationCenter.delegate = self
+		
+		notificationCenter.delegate = self
         
         // TODO: Hack to hide window at launch time
     
@@ -102,15 +97,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 	
+	func showQuoteVC (sender: AnyObject?){
+		print("show quote VC")
+		popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
+		if let button = statusItem.button {
+			popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+			eventMonitor?.start()
+		}
+	}
+	
 	func endMyDay(sender: AnyObject?) {
 		print("end my day")
 		popover.contentViewController = EndMyDayViewController(nibName: "EndMyDayViewController", bundle: nil)
+		popover.contentSize = NSSize(width: 868, height: 452)
 		if let button = statusItem.button {
 			popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+			eventMonitor?.start()
 		}
 	}
-    
-
 }
 
 // MARK: - NSUserNotificationCenterDelegate
