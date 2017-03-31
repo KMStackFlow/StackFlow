@@ -43,9 +43,9 @@ public class UserNotificationManager: NSObject {
     
     public func sendInitiateFlowUserNotification(forMaxMinutes maxMinutes: UInt, didActivateAction: UserNotificationDidActivateAction?) {
         let userNotification = packageUserNotification(withTitle: self.productName,
-                                                       informativeText: "\(maxMinutes / 60) hours of free time until the next meeting! Want to initiate a flow time?",
+                                                       informativeText: "\(maxMinutes) minutes till the next meeting! Want to initiate a flow time?",
                                                        actionButtonTitle: "Sure",
-                                                       alternativeActionButtonTitles: ["2 hr", "1.5 hr", "1 hr"],
+                                                       alternativeActionButtonTitles: nil,
                                                        identifier: UserNotificationManager.initiateFlowUserNotificationIdentifier)
         userNotificationCenter.deliver(userNotification)
         
