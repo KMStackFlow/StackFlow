@@ -112,7 +112,7 @@ extension UserNotificationManager: NSUserNotificationCenterDelegate {
         case .contentsClicked:
             print("Contents Clicked")
         case .replied:
-            print("Replided")
+            print("Replied")
         case .none:
             print("None")
         }
