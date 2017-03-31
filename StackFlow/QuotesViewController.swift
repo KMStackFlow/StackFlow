@@ -13,6 +13,8 @@ class QuotesViewController: NSViewController {
    
     @IBOutlet var textLabel: NSTextField!
     
+    @IBOutlet weak var image_view: NSImageView!
+    
     let quotes = Quote.all
     
     var currentQuoteIndex: Int = 0 {
@@ -24,7 +26,6 @@ class QuotesViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.wantsLayer = true
         // Do view setup here.
     }
     
@@ -36,14 +37,21 @@ class QuotesViewController: NSViewController {
 //        self.view.wantsLayer = true
         
         currentQuoteIndex = 0
+        enterFullScreen()
     }
     
     override func awakeFromNib() {
-        if self.view.layer != nil {
-            let color : CGColor = CGColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1.0)
-            self.view.layer?.backgroundColor = color
-        }
+//        if self.view.layer != nil {
+//            let color : CGColor = CGColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1.0)
+//            self.view.layer?.backgroundColor = color
+//        }
         
+    }
+    
+    func enterFullScreen() {
+        guard let mainScreenFrame = NSScreen.main()?.frame else { return }
+        guard let newWindowFrameRect = self.view.window?.frameRect(forContentRect: mainScreenFrame) else { return }
+        self.view.window?.setFrame(newWindowFrameRect, display: true)
     }
     
     func updateQuote() {

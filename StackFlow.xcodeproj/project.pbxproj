@@ -26,6 +26,7 @@
 		EC3ED04E1E870D5F0068E4A0 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3ED04D1E870D5F0068E4A0 /* EventMonitor.swift */; };
 		EC3ED0531E8737CB0068E4A0 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3ED0511E8737CB0068E4A0 /* QuotesViewController.swift */; };
 		EC3ED0541E8737CB0068E4A0 /* QuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC3ED0521E8737CB0068E4A0 /* QuotesViewController.xib */; };
+		ECE8B8841E8ED792007C7DF4 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECE8B8831E8ED792007C7DF4 /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		EC3ED04D1E870D5F0068E4A0 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		EC3ED0511E8737CB0068E4A0 /* QuotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		EC3ED0521E8737CB0068E4A0 /* QuotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuotesViewController.xib; sourceTree = "<group>"; };
+		ECE8B8831E8ED792007C7DF4 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = Assets.xcassets/background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				909F0AE71E832AA900E83FA2 /* Bridge.plugin */,
 				90E878541E85AB63002D3A04 /* breathe-with-me.m4v */,
 				90621A6E1E831BD500314660 /* Assets.xcassets */,
+				ECE8B8831E8ED792007C7DF4 /* background.jpg */,
 				90621A701E831BD500314660 /* Main.storyboard */,
 				90621A731E831BD500314660 /* Info.plist */,
 			);
@@ -300,6 +303,7 @@
 			files = (
 				EC3ED0541E8737CB0068E4A0 /* QuotesViewController.xib in Resources */,
 				90621A6F1E831BD500314660 /* Assets.xcassets in Resources */,
+				ECE8B8841E8ED792007C7DF4 /* background.jpg in Resources */,
 				90E878551E85AB63002D3A04 /* breathe-with-me.m4v in Resources */,
 				90621A721E831BD500314660 /* Main.storyboard in Resources */,
 				35C022701E8DC3DC0000C409 /* EndMyDayViewController.xib in Resources */,
