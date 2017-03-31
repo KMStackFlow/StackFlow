@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		35C0226E1E8DC37C0000C409 /* EndMyDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C0226D1E8DC37C0000C409 /* EndMyDayViewController.swift */; };
 		35C022701E8DC3DC0000C409 /* EndMyDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C0226F1E8DC3DC0000C409 /* EndMyDayViewController.xib */; };
+		904D314D1E8DD1DE00161C27 /* BridgeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D314C1E8DD1DE00161C27 /* BridgeInterface.swift */; };
 		90621A6B1E831BD500314660 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90621A6A1E831BD500314660 /* AppDelegate.swift */; };
 		90621A6D1E831BD500314660 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90621A6C1E831BD500314660 /* ViewController.swift */; };
 		90621A6F1E831BD500314660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90621A6E1E831BD500314660 /* Assets.xcassets */; };
@@ -16,8 +17,8 @@
 		90621A7D1E831BD500314660 /* StackFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90621A7C1E831BD500314660 /* StackFlowTests.swift */; };
 		90621A881E831BD500314660 /* StackFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90621A871E831BD500314660 /* StackFlowUITests.swift */; };
 		90621A961E831C6900314660 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90621A951E831C6900314660 /* main.swift */; };
+		906246581E8DAFC60033DF43 /* UserNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906246571E8DAFC60033DF43 /* UserNotificationManager.swift */; };
 		909F0AE81E832AA900E83FA2 /* Bridge.plugin in Resources */ = {isa = PBXBuildFile; fileRef = 909F0AE71E832AA900E83FA2 /* Bridge.plugin */; };
-		909F0AEA1E832BE300E83FA2 /* BridgeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F0AE91E832BE300E83FA2 /* BridgeInterface.swift */; };
 		90E8784F1E85A974002D3A04 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E8784E1E85A974002D3A04 /* AVKit.framework */; };
 		90E878511E85AAF3002D3A04 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E878501E85AAF3002D3A04 /* AVFoundation.framework */; };
 		90E878551E85AB63002D3A04 /* breathe-with-me.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 90E878541E85AB63002D3A04 /* breathe-with-me.m4v */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		35C0226D1E8DC37C0000C409 /* EndMyDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndMyDayViewController.swift; sourceTree = "<group>"; };
 		35C0226F1E8DC3DC0000C409 /* EndMyDayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndMyDayViewController.xib; sourceTree = "<group>"; };
+		904D314C1E8DD1DE00161C27 /* BridgeInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeInterface.swift; sourceTree = "<group>"; };
 		90621A671E831BD500314660 /* StackFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90621A6A1E831BD500314660 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90621A6C1E831BD500314660 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,8 +62,8 @@
 		90621A871E831BD500314660 /* StackFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackFlowUITests.swift; sourceTree = "<group>"; };
 		90621A891E831BD500314660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90621A951E831C6900314660 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		906246571E8DAFC60033DF43 /* UserNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationManager.swift; sourceTree = "<group>"; };
 		909F0AE71E832AA900E83FA2 /* Bridge.plugin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Bridge.plugin; sourceTree = "<group>"; };
-		909F0AE91E832BE300E83FA2 /* BridgeInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeInterface.swift; sourceTree = "<group>"; };
 		90E8784E1E85A974002D3A04 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		90E878501E85AAF3002D3A04 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		90E878541E85AB63002D3A04 /* breathe-with-me.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "breathe-with-me.m4v"; sourceTree = "<group>"; };
@@ -122,17 +124,14 @@
 		90621A691E831BD500314660 /* StackFlow */ = {
 			isa = PBXGroup;
 			children = (
-				909F0AE71E832AA900E83FA2 /* Bridge.plugin */,
-				90621A951E831C6900314660 /* main.swift */,
 				90621A6A1E831BD500314660 /* AppDelegate.swift */,
-				EC3ED0511E8737CB0068E4A0 /* QuotesViewController.swift */,
-				EC3ED0521E8737CB0068E4A0 /* QuotesViewController.xib */,
-				35C0226F1E8DC3DC0000C409 /* EndMyDayViewController.xib */,
-				35C0226D1E8DC37C0000C409 /* EndMyDayViewController.swift */,
 				EC3ED04D1E870D5F0068E4A0 /* EventMonitor.swift */,
-				EC3ED04B1E8707C30068E4A0 /* Quote.swift */,
-				909F0AE91E832BE300E83FA2 /* BridgeInterface.swift */,
-				90621A6C1E831BD500314660 /* ViewController.swift */,
+				906246571E8DAFC60033DF43 /* UserNotificationManager.swift */,
+				906246561E8DAF8E0033DF43 /* Model */,
+				906246551E8DAF6F0033DF43 /* ViewController */,
+				90621A951E831C6900314660 /* main.swift */,
+				904D314C1E8DD1DE00161C27 /* BridgeInterface.swift */,
+				909F0AE71E832AA900E83FA2 /* Bridge.plugin */,
 				90E878541E85AB63002D3A04 /* breathe-with-me.m4v */,
 				90621A6E1E831BD500314660 /* Assets.xcassets */,
 				90621A701E831BD500314660 /* Main.storyboard */,
@@ -157,6 +156,26 @@
 				90621A891E831BD500314660 /* Info.plist */,
 			);
 			path = StackFlowUITests;
+			sourceTree = "<group>";
+		};
+		906246551E8DAF6F0033DF43 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC3ED0511E8737CB0068E4A0 /* QuotesViewController.swift */,
+				EC3ED0521E8737CB0068E4A0 /* QuotesViewController.xib */,
+				35C0226F1E8DC3DC0000C409 /* EndMyDayViewController.xib */,
+				35C0226D1E8DC37C0000C409 /* EndMyDayViewController.swift */,
+				90621A6C1E831BD500314660 /* ViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		906246561E8DAF8E0033DF43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC3ED04B1E8707C30068E4A0 /* Quote.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		90E8784D1E85A974002D3A04 /* Frameworks */ = {
@@ -329,9 +348,10 @@
 				35C0226E1E8DC37C0000C409 /* EndMyDayViewController.swift in Sources */,
 				90621A6D1E831BD500314660 /* ViewController.swift in Sources */,
 				90621A6B1E831BD500314660 /* AppDelegate.swift in Sources */,
-				909F0AEA1E832BE300E83FA2 /* BridgeInterface.swift in Sources */,
 				EC3ED04E1E870D5F0068E4A0 /* EventMonitor.swift in Sources */,
+				904D314D1E8DD1DE00161C27 /* BridgeInterface.swift in Sources */,
 				EC3ED04C1E8707C30068E4A0 /* Quote.swift in Sources */,
+				906246581E8DAFC60033DF43 /* UserNotificationManager.swift in Sources */,
 				90621A961E831C6900314660 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

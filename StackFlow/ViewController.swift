@@ -26,7 +26,7 @@ class ViewController: NSViewController {
 			let breathe = Bridge.sharedInstance().shouldBreathe()
 			if breathe {
 				Swift.print("should breathe")
-				self.appDelegate?.sendNotification()
+				self.appDelegate?.simulateContextSwitching()
 			}
         }
 
