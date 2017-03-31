@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35C0226E1E8DC37C0000C409 /* EndMyDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C0226D1E8DC37C0000C409 /* EndMyDayViewController.swift */; };
+		35C022701E8DC3DC0000C409 /* EndMyDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C0226F1E8DC3DC0000C409 /* EndMyDayViewController.xib */; };
 		90621A6B1E831BD500314660 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90621A6A1E831BD500314660 /* AppDelegate.swift */; };
 		90621A6D1E831BD500314660 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90621A6C1E831BD500314660 /* ViewController.swift */; };
 		90621A6F1E831BD500314660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90621A6E1E831BD500314660 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35C0226D1E8DC37C0000C409 /* EndMyDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndMyDayViewController.swift; sourceTree = "<group>"; };
+		35C0226F1E8DC3DC0000C409 /* EndMyDayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndMyDayViewController.xib; sourceTree = "<group>"; };
 		90621A671E831BD500314660 /* StackFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90621A6A1E831BD500314660 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90621A6C1E831BD500314660 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				90621A6A1E831BD500314660 /* AppDelegate.swift */,
 				EC3ED0511E8737CB0068E4A0 /* QuotesViewController.swift */,
 				EC3ED0521E8737CB0068E4A0 /* QuotesViewController.xib */,
+				35C0226F1E8DC3DC0000C409 /* EndMyDayViewController.xib */,
+				35C0226D1E8DC37C0000C409 /* EndMyDayViewController.swift */,
 				EC3ED04D1E870D5F0068E4A0 /* EventMonitor.swift */,
 				EC3ED04B1E8707C30068E4A0 /* Quote.swift */,
 				909F0AE91E832BE300E83FA2 /* BridgeInterface.swift */,
@@ -277,6 +283,7 @@
 				90621A6F1E831BD500314660 /* Assets.xcassets in Resources */,
 				90E878551E85AB63002D3A04 /* breathe-with-me.m4v in Resources */,
 				90621A721E831BD500314660 /* Main.storyboard in Resources */,
+				35C022701E8DC3DC0000C409 /* EndMyDayViewController.xib in Resources */,
 				909F0AE81E832AA900E83FA2 /* Bridge.plugin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC3ED0531E8737CB0068E4A0 /* QuotesViewController.swift in Sources */,
+				35C0226E1E8DC37C0000C409 /* EndMyDayViewController.swift in Sources */,
 				90621A6D1E831BD500314660 /* ViewController.swift in Sources */,
 				90621A6B1E831BD500314660 /* AppDelegate.swift in Sources */,
 				909F0AEA1E832BE300E83FA2 /* BridgeInterface.swift in Sources */,
