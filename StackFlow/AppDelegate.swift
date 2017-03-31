@@ -66,6 +66,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func simulateInitiateFlow() {
         UserNotificationManager.sharedInstance.sendInitiateFlowUserNotification(forMaxMinutes: 120) { notification in
             print("Initial Flow!")
+			if let button = self.statusItem.button {
+				button.image = NSImage(named: "StatusBarButtonImageFlow")
+			}
         }
     }
 
