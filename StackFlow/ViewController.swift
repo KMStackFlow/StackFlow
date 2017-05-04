@@ -57,6 +57,10 @@ class ViewController: NSViewController {
 extension ViewController {
     func itemDidFinishPlaying(_ noitfication: Notification) {
         self.view.window?.orderOut(self)
+        print("Finish breathing exercise")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            UserNotificationManager.sharedInstance.sendGoalReminderUserNotification(withDidActivateAction: nil)
+        }
     }
     
     func handleBreatheButtonClicked(_ noitfication: Notification) {

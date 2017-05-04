@@ -9,6 +9,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="QuotesViewController" customModule="StackFlow" customModuleProvider="target">
             <connections>
                 <outlet property="image_view" destination="q9q-sv-QJo" id="RcM-3U-bG1"/>
+                <outlet property="leftButton" destination="cRg-vk-Kcw" id="ODd-fG-hwS"/>
                 <outlet property="textLabel" destination="1Vm-pT-diV" id="76m-5q-vkM"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -23,7 +24,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="1000" height="681"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="background" id="6d0-hL-gTr"/>
                 </imageView>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e5T-z8-xm9">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e5T-z8-xm9" customClass="SYFlatButton">
                     <rect key="frame" x="418" y="62" width="165" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="153" id="7Km-If-AU6"/>
@@ -33,6 +34,18 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderNormalColor">
+                            <color key="value" red="0.1450980392" green="0.70980392160000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="quit:" target="-2" id="nVd-eD-YME"/>
                     </connections>
@@ -55,9 +68,9 @@
                         <constraint firstAttribute="height" constant="34" id="1IP-Ae-cT0"/>
                         <constraint firstAttribute="width" constant="34" id="EUU-cQ-dBI"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSGoLeftTemplate" imagePosition="only" alignment="center" controlSize="small" imageScaling="proportionallyUpOrDown" inset="2" id="deN-al-G4r">
+                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSGoLeftTemplate" imagePosition="only" alignment="center" alternateImage="NSGoLeftTemplate" inset="2" id="deN-al-G4r">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
                         <action selector="goLeft:" target="-2" id="MdX-ye-9EX"/>
