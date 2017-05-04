@@ -68,6 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func simulateInitiateFlow() {
+        print(Bridge.sharedInstance().findFlowTime())
         UserNotificationManager.sharedInstance.sendInitiateFlowUserNotification(forMaxMinutes: 90) { notification in
             print("Initial Flow!")
 			if let button = self.statusItem.button {

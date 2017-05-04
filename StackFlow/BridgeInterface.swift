@@ -14,6 +14,7 @@ import Foundation
     func getPythonInformation() -> String
     func add(a: Int, b: Int) -> Int
 	func shouldBreathe() -> Bool
+    func findFlowTime() -> Bool
 }
 
 /// A simple class for access to an instance of the python interface

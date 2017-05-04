@@ -25,6 +25,8 @@ class Bridge(NSObject, protocols=[BridgeInterface]):
 
     def shouldBreathe(self):
     	return BD.should_breathe()
+    def findFlowTime(self):
+    	return quickstart.find_flowtime()
 
 
 logger = logging.getLogger(__name__)

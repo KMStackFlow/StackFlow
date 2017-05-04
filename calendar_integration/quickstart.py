@@ -56,6 +56,7 @@ def get_credentials():
             credentials = tools.run(flow, store)
         print('Storing credentials to ' + credential_path)
     return credentials
+    
 def find_flowtime():
     events = check_calendar()
     return prompt_flow(events)
@@ -96,7 +97,7 @@ def check_calendar():
     return events 
 
 def prompt_flow(events_list):
-    start_next_meeting = events_list[0]['start'].get('dateTime', event['start'].get('date')) 
+    start_next_meeting = events_list[0]['start'].get('dateTime', events_list[0].get('date')) 
     print("start_next_meeting", start_next_meeting, "type = ", type(start_next_meeting))
     current_time = datetime.datetime.time(datetime.datetime.now(pytz.timezone('US/Eastern')))
     current_date_time = datetime.datetime.now(pytz.timezone('US/Eastern'))
