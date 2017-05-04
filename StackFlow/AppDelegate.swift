@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // TODO: Hack to hide window at launch time
         NSApplication.shared().windows.last!.close()
     }
-
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
@@ -63,9 +63,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    @IBAction func initiateFlow(_ sender: Any) {
+        simulateInitiateFlow()
+    }
+    
     func simulateInitiateFlow() {
-        UserNotificationManager.sharedInstance.sendInitiateFlowUserNotification(forMaxMinutes: 120) { notification in
+        UserNotificationManager.sharedInstance.sendInitiateFlowUserNotification(forMaxMinutes: 90) { notification in
             print("Initial Flow!")
+			if let button = self.statusItem.button {
+				button.image = NSImage(named: "StatusBarButtonImageFlow")
+			}
         }
     }
 
