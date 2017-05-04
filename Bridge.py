@@ -7,6 +7,7 @@ from Cocoa import NSView
 from AppKit import NSGraphicsContext, NSRectToCGRect
 import Quartz
 from behavior_detector.behavior_detector import BehaviorDetector
+from calendar_integration import quickstart
 
 
 BridgeInterface = objc.protocolNamed("StackFlow.BridgeInterface")
@@ -24,6 +25,8 @@ class Bridge(NSObject, protocols=[BridgeInterface]):
 
     def shouldBreathe(self):
     	return BD.should_breathe()
+    def findFlowTime(self):
+    	return quickstart.find_flowtime()
 
 
 logger = logging.getLogger(__name__)

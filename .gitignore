@@ -177,3 +177,4 @@ update
 *.DS_Store
 behavior_detector/logs
 *.pyc
+calendar_integration/client_secret.json
