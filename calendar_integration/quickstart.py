@@ -56,8 +56,12 @@ def get_credentials():
             credentials = tools.run(flow, store)
         print('Storing credentials to ' + credential_path)
     return credentials
+def find_flowtime():
+    events = check_calendar()
+    return prompt_flow(events)
 
-def main():
+
+def check_calendar():
     """Shows basic usage of the Google Calendar API.
 
     Creates a Google Calendar API service object and outputs a list of the next
@@ -89,59 +93,62 @@ def main():
         start = event['start'].get('dateTime', event['start'].get('date'))
         end = event['end'].get('dateTime', event['end'].get('date'))
         print("start: ", start, "end: ", end, event['summary'])
+    return events 
 
-    def promptFlow(events_list):
-        start_next_meeting = events_list[0]['start'].get('dateTime', event['start'].get('date')) 
-        print("start_next_meeting", start_next_meeting, "type = ", type(start_next_meeting))
-        current_time = datetime.datetime.time(datetime.datetime.now(pytz.timezone('US/Eastern')))
-        current_date_time = datetime.datetime.now(pytz.timezone('US/Eastern'))
-        start_day_time = datetime.time(9, 0, 0, 0,    pytz.timezone('US/Eastern'))
-        end_day_time = datetime.time(18, 30, 0, 0,    pytz.timezone('US/Eastern'))
-        print("current_time: ", current_time, "type = ", type(current_time))
-        print("start_day_time: ", start_day_time, "type = ", type(start_day_time))
-        print("end_day_time: ", end_day_time, "type = ", type(end_day_time))
-
-
-        dt1 = dateutil.parser.parse(start_next_meeting)
-        time_till_next_meeting = dt1 - current_date_time
-        print( "time_till_next_meeting: ", time_till_next_meeting)
-        s = time_till_next_meeting.seconds
-        hours_free, remainder = divmod(s, 3600)
-        minutes_free, seconds = divmod(remainder, 60)
-        print("hours_free: ", hours_free)
-        if hours_free >= 1 and start_day_time < current_time < end_day_time :
-            print ("It looks like you have more than one hour before your next meeting, let's start a flow time")
-        else:
-            print ("not enough time for flow")
+def prompt_flow(events_list):
+    start_next_meeting = events_list[0]['start'].get('dateTime', event['start'].get('date')) 
+    print("start_next_meeting", start_next_meeting, "type = ", type(start_next_meeting))
+    current_time = datetime.datetime.time(datetime.datetime.now(pytz.timezone('US/Eastern')))
+    current_date_time = datetime.datetime.now(pytz.timezone('US/Eastern'))
+    start_day_time = datetime.time(9, 0, 0, 0,    pytz.timezone('US/Eastern'))
+    end_day_time = datetime.time(18, 30, 0, 0,    pytz.timezone('US/Eastern'))
+    print("current_time: ", current_time, "type = ", type(current_time))
+    print("start_day_time: ", start_day_time, "type = ", type(start_day_time))
+    print("end_day_time: ", end_day_time, "type = ", type(end_day_time))
 
 
-    promptFlow(events)
+    dt1 = dateutil.parser.parse(start_next_meeting)
+    time_till_next_meeting = dt1 - current_date_time
+    print( "time_till_next_meeting: ", time_till_next_meeting)
+    s = time_till_next_meeting.seconds
+    hours_free, remainder = divmod(s, 3600)
+    minutes_free, seconds = divmod(remainder, 60)
+    print("hours_free: ", hours_free)
+    if hours_free >= 1 and start_day_time < current_time < end_day_time :
+        print ("It looks like you have more than one hour before your next meeting, let's start a flow time")
+        return True 
+    else:
+        print ("not enough time for flow")
+        return False 
+
+
+    # prompt_flow(events)
 
     ## two options check free busy to see if free, or look at space between calendar events
 
     ## free/busy ###
     ## Not being used as of now ###
 
-    start = now
-    end = datetime.datetime.utcnow().replace(hour=23, microsecond=0).isoformat() + 'Z'
-    print ("start", dateparser.parse(start))
-    print ("end", dateparser.parse(end))
+    # start = now
+    # end = datetime.datetime.utcnow().replace(hour=23, microsecond=0).isoformat() + 'Z'
+    # print ("start", dateparser.parse(start))
+    # print ("end", dateparser.parse(end))
 
 
-    print ("start", start)
-    print ("end", end)
+    # print ("start", start)
+    # print ("end", end)
 
-    body = {
-      "timeMin": start,
-      "timeMax": end,
-      "timeZone": 'UTC',
-      "items": [{"id": 'claireopila@gmail.com'}]
-    }
+    # body = {
+    #   "timeMin": start,
+    #   "timeMax": end,
+    #   "timeZone": 'UTC',
+    #   "items": [{"id": 'claireopila@gmail.com'}]
+    # }
 
-    eventsResult = service.freebusy().query(body=body).execute()
-    cal_dict = eventsResult[u'calendars']
-    for cal_name in cal_dict:
-        print(cal_name, cal_dict[cal_name])
+    # eventsResult = service.freebusy().query(body=body).execute()
+    # cal_dict = eventsResult[u'calendars']
+    # for cal_name in cal_dict:
+    #     print(cal_name, cal_dict[cal_name])
 
     # def checkFreetime():
     #     if start
@@ -166,5 +173,5 @@ def main():
     # free = freeResult.get('items', [])
 
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+    # main()
