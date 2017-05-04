@@ -1,0 +1,12 @@
+PODS:
+  - SYFlatButton (1.2)
+
+DEPENDENCIES:
+  - SYFlatButton
+
+SPEC CHECKSUMS:
+  SYFlatButton: cc8b2eb1d123fb196f42b922a47802c03abc602a
+
+PODFILE CHECKSUM: abe1b4ab2feed8bfb41ab80d2557fef5ee18550d
+
+COCOAPODS: 1.2.1

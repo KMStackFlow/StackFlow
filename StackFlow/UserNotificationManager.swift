@@ -19,6 +19,9 @@ public class UserNotificationManager: NSObject {
     
     fileprivate static let contextSwitchingUserNotificationIdentifier = "StackFlow.Notification.ContextSwitching"
     fileprivate static let initiateFlowUserNotificationIdentifier = "StackFlow.Notification.InitiateFlow"
+    fileprivate static let goalReminderUserNotificationIdentifier = "StackFlow.Notification.GoalReminder"
+    
+    var goal: String?
     
     static var sharedInstance: UserNotificationManager {
         // Lazy instantiation
@@ -47,6 +50,8 @@ public class UserNotificationManager: NSObject {
                                                        actionButtonTitle: "Sure",
                                                        alternativeActionButtonTitles: nil,
                                                        identifier: UserNotificationManager.initiateFlowUserNotificationIdentifier)
+        userNotification.responsePlaceholder = "What's your goal?"
+        userNotification.hasReplyButton = true
         userNotificationCenter.deliver(userNotification)
         
         initiateFlowUserNotificationDidActivateAction = didActivateAction
@@ -57,6 +62,11 @@ public class UserNotificationManager: NSObject {
         userNotificationCenter.deliver(userNotification)
         
         contextSwitchingUserNotificationDidActivateAction = didActivateAction
+    }
+    
+    public func sendGoalReminderUserNotification(withDidActivateAction didActivateAction: UserNotificationDidActivateAction?) {
+        let userNotification = packageUserNotification(withTitle: self.productName, informativeText: "Alright, let's keep working on \(goal!)", actionButtonTitle: "OK", alternativeActionButtonTitles: nil, identifier: UserNotificationManager.goalReminderUserNotificationIdentifier)
+        userNotificationCenter.deliver(userNotification)
     }
     
     private func packageUserNotification(withTitle title: String?,
@@ -113,6 +123,15 @@ extension UserNotificationManager: NSUserNotificationCenterDelegate {
             print("Contents Clicked")
         case .replied:
             print("Replied")
+            if let identifier = notification.identifier {
+                switch identifier {
+                case UserNotificationManager.initiateFlowUserNotificationIdentifier:
+                    self.goal = notification.response?.string
+                    initiateFlowUserNotificationDidActivateAction?(notification)
+                default:
+                    print("not supported")
+                }
+            }
         case .none:
             print("None")
         }
