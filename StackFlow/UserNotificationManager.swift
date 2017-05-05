@@ -65,7 +65,10 @@ public class UserNotificationManager: NSObject {
     }
     
     public func sendGoalReminderUserNotification(withDidActivateAction didActivateAction: UserNotificationDidActivateAction?) {
-        let userNotification = packageUserNotification(withTitle: self.productName, informativeText: "Alright, let's keep working on \(goal!)", actionButtonTitle: "OK", alternativeActionButtonTitles: nil, identifier: UserNotificationManager.goalReminderUserNotificationIdentifier)
+        
+        let title = (goal == nil) ? "Keep going on!" : "Alright, let's keep working on \(goal!)"
+        
+        let userNotification = packageUserNotification(withTitle: self.productName, informativeText: title, actionButtonTitle: "OK", alternativeActionButtonTitles: nil, identifier: UserNotificationManager.goalReminderUserNotificationIdentifier)
         userNotificationCenter.deliver(userNotification)
     }
     

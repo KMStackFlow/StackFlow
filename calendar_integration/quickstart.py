@@ -122,7 +122,6 @@ def prompt_flow(events_list):
         print ("not enough time for flow")
         return False 
 
-
     # prompt_flow(events)
 
     ## two options check free busy to see if free, or look at space between calendar events
