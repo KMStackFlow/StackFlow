@@ -78,11 +78,13 @@ class PopupViewController: NSViewController {
                 stackEntryView.isSelectable = false
                 if new_stack_list.count > i {
                     let progamName = new_stack_list[i] as! String
-                    if !progamName.hasPrefix("StackFlow") {
-                        stackEntryView.string = progamName
-                        stackView.addSubview(stackEntryView)
-                    }
-                    
+					stackEntryView.string = progamName
+					stackView.addSubview(stackEntryView)
+//                    if !progamName.hasPrefix("StackFlow") {
+//                        stackEntryView.string = progamName
+//                        stackView.addSubview(stackEntryView)
+//                    }
+					
                 }
                 
             }
