@@ -5,6 +5,7 @@ from urllib.parse import urlparse
 from behavior_detector.distracting_key import DISTRACT_DOMAINS
 from collections import defaultdict
 import time
+import json
 
 
 class BehaviorDetector(object):
@@ -51,6 +52,7 @@ class BehaviorDetector(object):
         print(records)
         aggregate = defaultdict(int)
         distract_count = 0
+        records_return = []
         if records:
             last_time = None
             last_window = None
@@ -63,7 +65,6 @@ class BehaviorDetector(object):
                 if last_time:
                     time_diff = curr_time - last_time
                 last_time = curr_time
-
                 if time_diff and last_window in DISTRACT_DOMAINS:
                     aggregate[last_window] += time_diff
 
@@ -72,8 +73,10 @@ class BehaviorDetector(object):
                     if dname in DISTRACT_DOMAINS:
                         distract_count += 1
                     last_window = dname
+                    records_return.append(window_name[1])
                 else:  # If program is not chrome, just save program name
                     last_window = window_name[0]
+                    records_return.append(' '.join(window_name))
                 distract_ratio = distract_count / float(len(records))
 
                 if time_diff and time_diff <= self.CONTEXT_SWITCHING_SEC \
@@ -87,4 +90,5 @@ class BehaviorDetector(object):
                 OB = True
         if CS or OB:
             self.event_sniffer.last_records = []
-        return CS or OB
+        # print(records_return)
+        return json.dumps({'breath_bool': CS or OB, 'list_records': records_return})
