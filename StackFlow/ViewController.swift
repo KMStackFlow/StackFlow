@@ -18,10 +18,13 @@ class ViewController: NSViewController {
     var appDelegate: AppDelegate? {
         return NSApplication.shared().delegate as? AppDelegate
     }
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //appdelegate.popupviewcontroller.functionname 
+
+		var hasBreathe = false // dirty way for demo
         
         // Do any additional setup after loading the view.        
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in 
@@ -31,9 +34,10 @@ class ViewController: NSViewController {
                     let json_breathe = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:Any]
                     let breathe_bool = json_breathe?["breath_bool"] as! Bool
                     let list_records = json_breathe?["list_records"] as! NSArray
-                    if breathe_bool {
+                    if (breathe_bool && !hasBreathe) {
                         Swift.print("should breathe")
                         self.appDelegate?.simulateContextSwitching()
+						hasBreathe = true
                     }
                     
                     print(list_records)

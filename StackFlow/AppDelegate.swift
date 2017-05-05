@@ -107,8 +107,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
    
     func simulateInitiateFlow() {
+		print("initiate flow!!")
         UserNotificationManager.sharedInstance.sendInitiateFlowUserNotification(forMaxMinutes: 90) { notification in
-            print("Initial Flow!")
 			if let button = self.statusItem.button {
 				button.image = NSImage(named: "StatusBarButtonImageFlow")
 			}
@@ -161,11 +161,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func endMyDay(sender: AnyObject?) {
 		print("end my day")
 		popover.contentViewController = EndMyDayViewController(nibName: "EndMyDayViewController", bundle: nil)
-		popover.contentSize = NSSize(width: 868, height: 452)
-		if let button = statusItem.button {
-			popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-			eventMonitor?.start()
-		}
 	}
 }
 
