@@ -19,6 +19,7 @@ class PopupViewController: NSViewController {
     }
     
     @IBOutlet weak var pieChartView: PieChartView!
+    @IBOutlet weak var stackView: NSView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class PopupViewController: NSViewController {
         
         settingsMenu.addItem(NSMenuItem(title: "Simulate Context Switching", action: #selector(PopupViewController.simulateContextSwitching), keyEquivalent: "C"))
         settingsMenu.addItem(NSMenuItem(title: "Simulate Initiate Flow", action: #selector(PopupViewController.simulateInitiateFlow), keyEquivalent: "F"))
+        
+        settingsMenu.addItem(NSMenuItem(title: "End My Day", action: #selector(PopupViewController.endMyDay), keyEquivalent: "E"))
         
         settingsMenu.addItem(NSMenuItem(title: "Quit", action: #selector(PopupViewController.quit(_:)), keyEquivalent: "Q"))
         
@@ -42,6 +45,17 @@ class PopupViewController: NSViewController {
         pieChartView.data = PieChartData(dataSets: [pieChartDataSet])
         
         pieChartView.legend.formSize = 0.0
+        
+        let stackViewWidth = stackView.bounds.size.width
+        let stackViewHeight = stackView.bounds.size.height
+        for i in 0..<5 {
+            let y = stackViewHeight / 5.0 * CGFloat(i)
+            let stackEntryView = NSTextView(frame: CGRect(x: 0.0, y: y, width: stackViewWidth, height: stackViewHeight / 5.0))
+            stackEntryView.isEditable = false
+            stackEntryView.isSelectable = false
+            stackEntryView.string = "Safari"
+            stackView.addSubview(stackEntryView)
+        }
     }
     
     @IBAction func startFlowTime(_ sender: Any) {
@@ -70,5 +84,9 @@ extension PopupViewController {
     
     func simulateInitiateFlow(_ sender: Any) {
         appDelegate?.simulateInitiateFlow()
+    }
+    
+    func endMyDay(_ sender: Any) {
+        appDelegate?.endMyDay(sender: self)
     }
 }

@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         setUpMenu()
-        popover.contentViewController = PopupViewController(nibName: "PopupViewController", bundle: nil)
+        popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
         setUpEventMonitor()
         
         // TODO: Hack to hide window at launch time
@@ -104,7 +104,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
    
     func simulateInitiateFlow() {
-        print(Bridge.sharedInstance().findFlowTime())
         UserNotificationManager.sharedInstance.sendInitiateFlowUserNotification(forMaxMinutes: 90) { notification in
             print("Initial Flow!")
 			if let button = self.statusItem.button {
@@ -131,6 +130,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func closePopover(sender: AnyObject?) {
         popover.performClose(sender)
+        if popover.contentViewController as? QuotesViewController != nil {
+            self.popover.contentViewController = PopupViewController(nibName: "PopupViewController", bundle: nil)
+        }
         eventMonitor?.stop()
     }
     
@@ -143,14 +145,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 	
-	func showQuote(sender: AnyObject?) {
-		print("show quote VC")
-		popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
-		if let button = statusItem.button {
-			popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-			eventMonitor?.start()
-		}
-	}
+    @IBAction func showQuote(_ sender: Any) {
+        if popover.contentViewController as? QuotesViewController == nil {
+            popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
+        }
+        if let button = statusItem.button {
+            popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+            eventMonitor?.start()
+        }
+    }
 	
 	func endMyDay(sender: AnyObject?) {
 		print("end my day")
