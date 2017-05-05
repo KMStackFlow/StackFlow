@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         setUpMenu()
-        popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
+        popover.contentViewController = PopupViewController(nibName: "PopupViewController", bundle: nil)
         setUpEventMonitor()
         
         // TODO: Hack to hide window at launch time
@@ -47,11 +47,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		menu.addItem(NSMenuItem(title: "End My Day", action: #selector(AppDelegate.endMyDay), keyEquivalent: "e"))
         menu.addItem(NSMenuItem(title: "Quit StackFlow", action: #selector(AppDelegate.terminate(sender:)), keyEquivalent: "q"))
         
-        statusItem.menu = menu
+//        statusItem.menu = menu
         if let button = statusItem.button {
             button.image = NSImage(named: "StatusBarButtonImage")
+            button.action = #selector(AppDelegate.togglePopover(sender:))
         }
-        
     }
     
     private func setUpEventMonitor() {
