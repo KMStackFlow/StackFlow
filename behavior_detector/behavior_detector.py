@@ -87,4 +87,4 @@ class BehaviorDetector(object):
                 OB = True
         if CS or OB:
             self.event_sniffer.last_records = []
-        return CS or OB
+        return CS or OB,
