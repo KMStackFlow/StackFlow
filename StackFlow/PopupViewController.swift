@@ -45,6 +45,7 @@ class PopupViewController: NSViewController {
         pieChartView.data = PieChartData(dataSets: [pieChartDataSet])
         
         pieChartView.legend.formSize = 0.0
+		pieChartView.legend.enabled = false
         
         let stackViewWidth = stackView.bounds.size.width
         let stackViewHeight = stackView.bounds.size.height

@@ -61,4 +61,4 @@ class Aggregator(object):
         return json.dumps(aggregate)
 
     def aggregate_by_time(self):
-        return json.dumps({9: 20, 10: 30, 11: 0, 12: 10})
+        return json.dumps({9: 20, 10: 30, 11: 5, 12: 10})

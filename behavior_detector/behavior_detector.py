@@ -26,8 +26,8 @@ class BehaviorDetector(object):
         # TODO line 26: With Safari we don't get the URL
         self.SAFARI = ['Safari']
         self.CONTEXT_SWITCHING_SEC = 20
-        self.CONTEXT_SWITCHING_DISTRACT = 0.6
-        self.OFFENSIVE_TIME = 30  # 900 #15 min.
+        self.CONTEXT_SWITCHING_DISTRACT = 0.8
+        self.OFFENSIVE_TIME = 30
 
     def run(self):
         print("running EventSniffer...\n")

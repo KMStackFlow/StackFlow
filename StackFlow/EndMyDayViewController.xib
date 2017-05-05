@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
@@ -8,6 +8,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="EndMyDayViewController" customModule="StackFlow" customModuleProvider="target">
             <connections>
+                <outlet property="barChartView" destination="Efc-YM-5Eg" id="bNs-8I-aFp"/>
+                <outlet property="pieChartView" destination="9Zm-ia-7bq" id="CV9-dY-0KY"/>
                 <outlet property="view" destination="c22-O7-iKe" id="kQG-0n-xcT"/>
             </connections>
         </customObject>
@@ -17,16 +19,16 @@
             <rect key="frame" x="0.0" y="0.0" width="868" height="452"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="viC-ea-juc">
-                    <rect key="frame" x="0.0" y="0.0" width="868" height="452"/>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Efc-YM-5Eg" customClass="BarChartView" customModule="Charts">
+                    <rect key="frame" x="26" y="77" width="464" height="298"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="km-daily-summary" id="8A1-24-NPD"/>
-                </imageView>
+                </customView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Zm-ia-7bq" customClass="PieChartView" customModule="Charts">
+                    <rect key="frame" x="498" y="77" width="350" height="298"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </customView>
             </subviews>
             <point key="canvasLocation" x="-633" y="110"/>
         </customView>
     </objects>
-    <resources>
-        <image name="km-daily-summary" width="868" height="452"/>
-    </resources>
 </document>
