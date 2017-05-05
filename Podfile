@@ -7,6 +7,8 @@ target 'StackFlow' do
 
   # Pods for StackFlow
   pod 'SYFlatButton'
+  pod 'Charts'
+  pod 'DynamicColor'
 
   target 'StackFlowTests' do
     inherit! :search_paths

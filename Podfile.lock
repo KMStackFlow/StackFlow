@@ -1,12 +1,20 @@
 PODS:
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
+  - DynamicColor (3.3)
   - SYFlatButton (1.2)
 
 DEPENDENCIES:
+  - Charts
+  - DynamicColor
   - SYFlatButton
 
 SPEC CHECKSUMS:
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  DynamicColor: 3cdaa1e01c16e93ba744e0630f768373e0fc7a7d
   SYFlatButton: cc8b2eb1d123fb196f42b922a47802c03abc602a
 
-PODFILE CHECKSUM: abe1b4ab2feed8bfb41ab80d2557fef5ee18550d
+PODFILE CHECKSUM: 0dea2a1bcac12f496999abd936a5e6b55abb6a00
 
 COCOAPODS: 1.2.1

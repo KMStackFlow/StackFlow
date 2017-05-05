@@ -56,7 +56,7 @@ def get_credentials():
             credentials = tools.run(flow, store)
         print('Storing credentials to ' + credential_path)
     return credentials
-    
+
 def find_flowtime():
     events = check_calendar()
     return prompt_flow(events)
@@ -123,7 +123,8 @@ def prompt_flow(events_list):
         return False 
 
 
-find_flowtime()
+
+
     # prompt_flow(events)
 
     ## two options check free busy to see if free, or look at space between calendar events
