@@ -21,6 +21,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //appdelegate.popupviewcontroller.functionname 
+        
         // Do any additional setup after loading the view.        
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in 
 			let breathe = Bridge.sharedInstance().shouldBreathe()
@@ -33,7 +35,9 @@ class ViewController: NSViewController {
                         Swift.print("should breathe")
                         self.appDelegate?.simulateContextSwitching()
                     }
+                    
                     print(list_records)
+                    self.appDelegate?.popupViewController?.createStack(stack_list: list_records)
                 } catch {
                     print("Something went wrong")
                 }
