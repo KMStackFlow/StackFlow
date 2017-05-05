@@ -102,7 +102,7 @@ def prompt_flow(events_list):
     current_time = datetime.datetime.time(datetime.datetime.now(pytz.timezone('US/Eastern')))
     current_date_time = datetime.datetime.now(pytz.timezone('US/Eastern'))
     start_day_time = datetime.time(9, 0, 0, 0,    pytz.timezone('US/Eastern'))
-    end_day_time = datetime.time(22, 30, 0, 0,    pytz.timezone('US/Eastern'))
+    end_day_time = datetime.time(18, 30, 0, 0,    pytz.timezone('US/Eastern'))
     print("current_time: ", current_time, "type = ", type(current_time))
     print("start_day_time: ", start_day_time, "type = ", type(start_day_time))
     print("end_day_time: ", end_day_time, "type = ", type(end_day_time))
