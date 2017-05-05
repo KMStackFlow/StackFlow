@@ -25,25 +25,34 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="background" id="6d0-hL-gTr"/>
                 </imageView>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e5T-z8-xm9" customClass="SYFlatButton">
-                    <rect key="frame" x="418" y="62" width="165" height="32"/>
+                    <rect key="frame" x="424" y="69" width="153" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="153" id="7Km-If-AU6"/>
                         <constraint firstAttribute="height" constant="21" id="NmY-jh-fa1"/>
                     </constraints>
-                    <buttonCell key="cell" type="push" title="Start My Day" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="W5J-od-oK0">
+                    <buttonCell key="cell" type="bevel" title="Start My Day" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="W5J-od-oK0">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="borderNormalColor">
-                            <color key="value" red="0.1450980392" green="0.70980392160000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="16"/>
+                            <real key="value" value="3"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1"/>
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundNormalColor">
+                            <color key="value" red="0.16862745100000001" green="0.37254901959999998" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundHighlightColor">
+                            <color key="value" red="0.16862745100000001" green="0.37254901959999998" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="titleNormalColor">
+                            <color key="value" red="0.98823529409999999" green="0.98039215690000003" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="titleHighlightColor">
+                            <color key="value" red="0.98823529409999999" green="0.98039215690000003" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
