@@ -2,6 +2,7 @@ import datetime
 import time
 from urllib.parse import urlparse
 from collections import defaultdict
+import json
 
 
 class Aggregator(object):
@@ -14,8 +15,7 @@ class Aggregator(object):
         st = datetime.datetime.now().replace(hour=7, minute=0,
                                              second=0, microsecond=0)
         file_datetime = int(time.mktime(st.timetuple()))
-        print(file_datetime)
-        log_file_path = "behavior_detector/logs/window_" + str(file_datetime) + ".txt"
+        log_file_path = "logs/window_" + str(file_datetime) + ".txt"
         windows = []
         with open(log_file_path, 'r') as fr:
             for line in fr:
@@ -58,7 +58,7 @@ class Aggregator(object):
                     aggregate[domain] += int(curr_ts) - int(last_ts)
             else:
                 aggregate[window_name[0]] += int(curr_ts) - int(last_ts)
-        return aggregate
+        return json.dumps(aggregate)
 
     def aggregate_by_time(self):
-        return {9: 20, 10: 30, 11: 0, 12: 10}
+        return json.dumps({9: 20, 10: 30, 11: 0, 12: 10})

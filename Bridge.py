@@ -7,6 +7,7 @@ from Cocoa import NSView
 from AppKit import NSGraphicsContext, NSRectToCGRect
 import Quartz
 from behavior_detector.behavior_detector import BehaviorDetector
+from behavior_detector.aggregator import Aggregator
 from calendar_integration import quickstart
 
 
@@ -29,6 +30,12 @@ class Bridge(NSObject, protocols=[BridgeInterface]):
     def findFlowTime(self):
     	return quickstart.find_flowtime()
 
+    def aggregateByHour(self):
+        return AG.aggregate_by_time()
+
+    def aggregateByProgram(self):
+        return AG.aggregate_by_program()
+
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
@@ -36,4 +43,5 @@ logging.basicConfig(level=logging.INFO)
 logger.info("Loaded python bundle")
 
 BD = BehaviorDetector()
+AG = Aggregator()
 BD.run()

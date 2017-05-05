@@ -15,6 +15,8 @@ import Foundation
     func add(a: Int, b: Int) -> Int
     func shouldBreathe() -> String
     func findFlowTime() -> Bool
+    func aggregateByHour() -> String
+    func aggregateByProgram() -> String
 }
 
 /// A simple class for access to an instance of the python interface

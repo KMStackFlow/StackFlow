@@ -63,7 +63,7 @@ class EventSniffer:
 		self.current_app = None
 		self.last_app_logged = None
 		self.init_chrome_tab_script()
-		self.num_records = 5
+		self.num_records = 10
 		self.last_records = []
 		
 	def init_chrome_tab_script(self):
