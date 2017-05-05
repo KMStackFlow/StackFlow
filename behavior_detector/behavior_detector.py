@@ -26,7 +26,7 @@ class BehaviorDetector(object):
         # TODO line 26: With Safari we don't get the URL
         self.SAFARI = ['Safari']
         self.CONTEXT_SWITCHING_SEC = 20
-        self.CONTEXT_SWITCHING_DISTRACT = 0.4
+        self.CONTEXT_SWITCHING_DISTRACT = 0.2
         self.OFFENSIVE_TIME = 30
 
     def run(self):
@@ -73,7 +73,8 @@ class BehaviorDetector(object):
                     if dname in DISTRACT_DOMAINS:
                         distract_count += 1
                     last_window = dname
-                    records_return.append(window_name[1])
+                    # records_return.append(window_name[1])
+                    records_return.append(dname)
                 else:  # If program is not chrome, just save program name
                     last_window = window_name[0]
                     records_return.append(' '.join(window_name))
