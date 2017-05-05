@@ -15,9 +15,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
     let popover = NSPopover()
     var eventMonitor: EventMonitor?
-//    var prompted_flow: Bool 
-    var timer = 60
-
+//    var prompted_flow: Bool
+      // Comment out for demo purposes!
+//    var timer = 60
+    let popupViewController = PopupViewController(nibName: "PopupViewController", bundle: nil)
     
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -28,8 +29,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // TODO: Hack to hide window at launch time
         NSApplication.shared().windows.last!.close()
-        
-        _ = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(AppDelegate.countdown), userInfo: nil, repeats: true)
+     
+            // Comment out for demo purposes!
+//        _ = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(AppDelegate.countdown), userInfo: nil, repeats: true)
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -68,21 +70,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             NotificationCenter.default.post(name: NotificationBreatheButtonClicked, object: self)
         }
     }
+    // Comment out for demo purposes!
     
-    func countdown(){
-        
-        if timer == 60 {
-            triggerFlow()
-        }
-        // Create a timer
-        else if timer == 0 {
-            triggerFlow()
-            timer = 60
-        }
-//
-        timer -= 1
-        
-    }
+//    func countdown(){
+//        
+//        if timer == 60 {
+//            triggerFlow()
+//        }
+//        // Create a timer
+//        else if timer == 0 {
+//            triggerFlow()
+//            timer = 60
+//        }
+////
+//        timer -= 1
+//        
+//    }
     
   
     
@@ -131,7 +134,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func closePopover(sender: AnyObject?) {
         popover.performClose(sender)
         if popover.contentViewController as? QuotesViewController != nil {
-            self.popover.contentViewController = PopupViewController(nibName: "PopupViewController", bundle: nil)
+            self.popover.contentViewController = popupViewController
         }
         eventMonitor?.stop()
     }
