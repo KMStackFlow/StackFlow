@@ -15,6 +15,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
     let popover = NSPopover()
     var eventMonitor: EventMonitor?
+//    var prompted_flow: Bool 
+    var timer = 60
+
+    
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -24,6 +28,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // TODO: Hack to hide window at launch time
         NSApplication.shared().windows.last!.close()
+        
+        _ = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(AppDelegate.countdown), userInfo: nil, repeats: true)
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -63,10 +69,40 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    func countdown(){
+        
+        if timer == 60 {
+            triggerFlow()
+        }
+        // Create a timer
+        else if timer == 0 {
+            triggerFlow()
+            timer = 60
+        }
+//
+        timer -= 1
+        
+    }
+    
+  
+    
+    func triggerFlow(){
+        let flow_boolean = Bridge.sharedInstance().findFlowTime()
+        print("flow_boolean: " , flow_boolean)
+        if flow_boolean == true {
+            simulateInitiateFlow()
+        }
+        else {
+            print("there are no flow periods right now")
+        }
+    }
+    
+    
     @IBAction func initiateFlow(_ sender: Any) {
         simulateInitiateFlow()
     }
     
+   
     func simulateInitiateFlow() {
         print(Bridge.sharedInstance().findFlowTime())
         UserNotificationManager.sharedInstance.sendInitiateFlowUserNotification(forMaxMinutes: 90) { notification in
