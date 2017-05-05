@@ -46,17 +46,50 @@ class PopupViewController: NSViewController {
         
         pieChartView.legend.formSize = 0.0
 		pieChartView.legend.enabled = false
+		pieChartView.chartDescription?.text = ""
         
         let stackViewWidth = stackView.bounds.size.width
         let stackViewHeight = stackView.bounds.size.height
-        for i in 0..<5 {
-            let y = stackViewHeight / 5.0 * CGFloat(i)
-            let stackEntryView = NSTextView(frame: CGRect(x: 0.0, y: y, width: stackViewWidth, height: stackViewHeight / 5.0))
-            stackEntryView.isEditable = false
-            stackEntryView.isSelectable = false
-            stackEntryView.string = "Safari"
-            stackView.addSubview(stackEntryView)
+//        for i in 0..<5 {
+//            let y = stackViewHeight / 5.0 * CGFloat(i)
+//            let stackEntryView = NSTextView(frame: CGRect(x: 0.0, y: y, width: stackViewWidth, height: stackViewHeight / 5.0))
+//            stackEntryView.isEditable = false
+//            stackEntryView.isSelectable = false
+//            stackEntryView.string = "Safari"
+//            stackView.addSubview(stackEntryView)
+//        }
+    }
+    
+    func createStack( stack_list: NSArray){
+        if stackView != nil {
+            for subView in stackView.subviews {
+                subView.removeFromSuperview()
+            }
+            
+            let stackViewWidth = stackView.bounds.size.width
+            let stackViewHeight = stackView.bounds.size.height
+            print("stack list is: " , stack_list)
+            let new_stack_list = stack_list.reversed()
+            for i in 0..<5 {
+                
+                let y = stackViewHeight / 5.0 * CGFloat(5 - i)
+                let stackEntryView = NSTextView(frame: CGRect(x: 0.0, y: y, width: stackViewWidth, height: stackViewHeight / 5.0))
+                stackEntryView.isEditable = false
+                stackEntryView.isSelectable = false
+                if new_stack_list.count > i {
+                    let progamName = new_stack_list[i] as! String
+                    if !progamName.hasPrefix("StackFlow") {
+                        stackEntryView.string = progamName
+                        stackView.addSubview(stackEntryView)
+                    }
+                    
+                }
+                
+            }
+           
         }
+
+        
     }
     
     @IBAction func startFlowTime(_ sender: Any) {

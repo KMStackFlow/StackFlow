@@ -18,6 +18,9 @@ class EndMyDayViewController: NSViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.view.wantsLayer = true
+		self.view.layer!.backgroundColor = DynamicColor(hex: 0xFCFAF2).cgColor
+		
 		let (hours, productiveMinutes) = getProductivityData()
 		let yse1 = zip(hours, productiveMinutes).map { BarChartDataEntry(x: Double($0.0), y: Double($0.1)) }
 		
@@ -25,6 +28,7 @@ class EndMyDayViewController: NSViewController {
 		let ds1 = BarChartDataSet(values: yse1, label: "Productive Time")
 		ds1.colors = [DynamicColor(hex: 0xF05E1C)]
 		data.addDataSet(ds1)
+		data.barWidth = 0.3
 		
 		barChartView.data = data
 		
@@ -39,10 +43,10 @@ class EndMyDayViewController: NSViewController {
 		
 		
 		let pieChartData = [
-			("Sublime Text", 75),
 			("stackoverflow.com", 23),
-			("github.com", 12),
+			("github.com", 42),
 			("amazon.com", 20),
+			("Sublime Text", 75),
 			("Terminal", 24),
 			("Slack", 49)
 		]
@@ -53,8 +57,8 @@ class EndMyDayViewController: NSViewController {
 			
 		let pieChartDataSet = PieChartDataSet(values: pieChartEntries, label: "")
 		pieChartDataSet.colors = [DynamicColor(hex: 0xF05E1C), DynamicColor(hex: 0xE8B647)]
-		pieChartDataSet.valueColors = [DynamicColor(hex: 0x434343)]
-		pieChartDataSet.entryLabelColor = DynamicColor(hex: 0x434343)
+		pieChartDataSet.valueColors = [DynamicColor(hex: 0xFCFAF2)]
+		pieChartDataSet.entryLabelColor = DynamicColor(hex: 0xFCFAF2)
 		pieChartView.data = PieChartData(dataSets: [pieChartDataSet])
 		pieChartView.chartDescription?.text = ""
 		pieChartView.legend.formSize = 0.0
