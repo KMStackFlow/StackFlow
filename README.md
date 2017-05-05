@@ -16,7 +16,8 @@ Move it in the calendar_integration folder and name it client_secret.json
 
 ```bash
 $ pip install --upgrade google-api-python-client
-$ pip install python-dateutil 
+$ pip install python-dateutil
+$ pip install dateparser
 ```
 Then, you can open StackFlow.xcodeproj and build & run the app.
 

@@ -123,6 +123,7 @@ def prompt_flow(events_list):
         return False 
 
 
+find_flowtime()
     # prompt_flow(events)
 
     ## two options check free busy to see if free, or look at space between calendar events

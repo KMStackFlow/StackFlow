@@ -10,6 +10,7 @@ import AVKit
 import AVFoundation
 import Cocoa
 
+
 class ViewController: NSViewController {
 
     @IBOutlet weak var playerView: AVPlayerView!
@@ -17,17 +18,26 @@ class ViewController: NSViewController {
     var appDelegate: AppDelegate? {
         return NSApplication.shared().delegate as? AppDelegate
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.        
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in 
 			let breathe = Bridge.sharedInstance().shouldBreathe()
-			if breathe {
-				Swift.print("should breathe")
-				self.appDelegate?.simulateContextSwitching()
-			}
+            if let data = breathe.data(using: String.Encoding.utf8) {
+                do {
+                    let json_breathe = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:Any]
+                    let breathe_bool = json_breathe?["breath_bool"] as! Bool
+                    let list_records = json_breathe?["list_records"] as! NSArray
+                    if breathe_bool {
+                        Swift.print("should breathe")
+                        self.appDelegate?.simulateContextSwitching()
+                    }
+                    print(list_records)
+                } catch {
+                    print("Something went wrong")
+                }
+            }
         }
 
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.handleBreatheButtonClicked(_:)), name: NotificationBreatheButtonClicked, object: self.appDelegate!)

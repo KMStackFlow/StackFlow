@@ -13,7 +13,7 @@ import Foundation
     static func createInstance() -> BridgeInterface
     func getPythonInformation() -> String
     func add(a: Int, b: Int) -> Int
-	func shouldBreathe() -> Bool
+    func shouldBreathe() -> String
     func findFlowTime() -> Bool
 }
 
