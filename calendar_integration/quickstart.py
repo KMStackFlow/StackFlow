@@ -56,7 +56,7 @@ def get_credentials():
             credentials = tools.run(flow, store)
         print('Storing credentials to ' + credential_path)
     return credentials
-    
+
 def find_flowtime():
     events = check_calendar()
     return prompt_flow(events)
