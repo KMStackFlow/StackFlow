@@ -49,7 +49,7 @@ class BehaviorDetector(object):
         CS = False
         OB = False
         records = self.event_sniffer.last_records
-        print(records)
+        print("event_sniffer", records)
         aggregate = defaultdict(int)
         distract_count = 0
         records_return = []
@@ -89,7 +89,7 @@ class BehaviorDetector(object):
             distracted = [i for i in aggregate if aggregate[i] >= self.OFFENSIVE_TIME]
             if distracted:
                 OB = True
-        if CS or OB:
-            self.event_sniffer.last_records = []
+        # if CS or OB:
+        #     self.event_sniffer.last_records = []
         # print(records_return)
         return json.dumps({'breath_bool': CS or OB, 'list_records': records_return})
