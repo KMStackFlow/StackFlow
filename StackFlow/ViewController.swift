@@ -39,7 +39,7 @@ class ViewController: NSViewController {
                         self.appDelegate?.simulateContextSwitching()
 						hasBreathe = true
                     }
-                    
+                    print("list_records")
                     print(list_records)
                     self.appDelegate?.popupViewController?.createStack(stack_list: list_records)
                 } catch {
