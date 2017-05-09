@@ -184,6 +184,7 @@ class EventSniffer:
 					print(s)
 				# substitute the rewound time to the window file pattern and write
 				fname = self.options.active_window_file % (rewindTime(current_time()), )
+				print(fname)
 				with open(fname, 'a') as f:
 					f.write('%s\n' % s)
 

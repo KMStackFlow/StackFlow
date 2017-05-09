@@ -43,5 +43,6 @@ logging.basicConfig(level=logging.INFO)
 logger.info("Loaded python bundle")
 
 BD = BehaviorDetector()
-AG = Aggregator()
 BD.run()
+
+AG = Aggregator()
